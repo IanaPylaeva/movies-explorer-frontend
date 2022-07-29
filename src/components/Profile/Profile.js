@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function Profile() {
   function handleSubmit(evt) {
@@ -12,16 +13,16 @@ function Profile() {
         <div className="profile__inputs">
           <div className="profile__input-container">          
             <p className="profile__text">Имя</p>
-            <input className="profile__input" value="Виталий" placeholder="Имя" type="text" name="name-user" minLength="1" maxLength="50" required />
+            <input className="profile__input" value="Виталий" placeholder="Имя" type="text" name="name" minLength="1" maxLength="50" required />
           </div>
           <div className="profile__input-container">          
             <p className="profile__text">E-mail</p>
-            <input className="profile__input" value="pochta@yandex.ru" placeholder="E-mail" type="email" name="name-user" minLength="1" maxLength="50"  required />
+            <input className="profile__input" value="pochta@yandex.ru" placeholder="E-mail" type="email" name="email" minLength="1" maxLength="50"  required />
           </div>
         </div>
       </form>
-      <button className="profile__button-edit" type="submit">Редактировать</button>
-      <button className="profile__button-sign-out" type="button">Выйти из аккаунта</button>
+      <Link to="/profile" className="profile__button-edit" type="submit">Редактировать</Link>
+      <Link to="/" className="profile__button-sign-out" type="button">Выйти из аккаунта</Link>
     </section>
   )
 }
