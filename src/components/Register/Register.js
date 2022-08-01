@@ -11,7 +11,7 @@ function Register() {
   return (
     <section className="auth">
       <div className="auth__container">
-        <img src={logo} alt="логотип" className="logo" />
+        <img src={logo} alt="логотип" className="auth__logo" />
         <h2 className="auth__title">Добро пожаловать!</h2>
       </div>
       <form className="auth__form" onSubmit={handleSubmit} name="auth-form">

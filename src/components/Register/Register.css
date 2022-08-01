@@ -1,14 +1,18 @@
 .auth {
-  margin: 0;
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-width: 100%;
+}
+.auth__logo {
+  width: 38px;
+  height: 38px;
+  margin-top: 70px;
 }
 .auth__container {
   min-width: 100%;
   padding-left: 442px;
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
 }
@@ -34,13 +38,13 @@
 }
 .auth__input-container {
   min-width: 100%;
-  margin: 0 auto 147px auto;
+  margin: 0 auto 24px auto;
   display: flex;
   flex-direction: column;
 }
 .auth__text {
   min-width: 100%;
-  margin: 24px 0 5px 0;
+  margin: 0 0 5px 0;
   padding: 0;
   font-weight: 400;
   font-size: 10px;
@@ -52,6 +56,10 @@
 }
 .auth__input {
   margin: 0 0 10px 0;
+  padding-bottom: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #E8E8E8;
 }
 .auth__input-error {
   font-weight: 400;
@@ -60,8 +68,10 @@
   color: #EE3465;
 }
 .auth__button {
+  border: none;
   margin: 0 auto;
-  display: flex;
+  padding-top: 13px;
+  padding-bottom: 15px;
   width: 396px;
   background-color: #3456F3;
   border-radius: 3px;
@@ -86,6 +96,8 @@
   color: #A0A0A0;
 }
 .auth__reg-link {
+  border: none;
+  text-decoration: none;
   max-width: 42px;
   margin: 0;
   font-weight: 400;
