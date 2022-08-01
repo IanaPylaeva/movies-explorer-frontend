@@ -5,42 +5,48 @@
   display: flex;
   flex-direction: column;
 }
-.auth__logo {
-  width: 38px;
-  height: 38px;
-  margin-top: 70px;
-}
 .auth__container {
-  min-width: 100%;
-  padding-left: 442px;
+  max-width: 396px;
+  margin: 70px auto 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
+.auth__logo {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 0 0;
+}
 .auth__title {
-  min-width: 369px;
+  min-width: 396px;
   margin: 40px auto 40px 0;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.21;
+  text-align: left;
 }
 .auth__form {
-  margin: 0;
-  min-width: 100%;
+  margin: 0 auto;
+  max-width: 396px;
   display: flex;
   flex-direction: column;
 }
 .auth__inputs {
   min-width: 390px;
-  margin: 0 auto;
+  margin: 0 auto 65px auto;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 .auth__input-container {
-  min-width: 100%;
+  min-width: 396px;
   margin: 0 auto 24px auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
+}
+.auth__input-container:last-child {
+  margin: 0 auto;
 }
 .auth__text {
   min-width: 100%;
@@ -55,7 +61,7 @@
   margin-top: 0;
 }
 .auth__input {
-  margin: 0 0 10px 0;
+  margin: 0;
   padding-bottom: 10px;
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -65,7 +71,15 @@
   line-height: 1.21;
   color: #000000;
 }
+.auth__input-mistake {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #EE3465;
+}
 .auth__input-error {
+  margin: 6px 0 0 0;
+  padding-bottom: 0;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;  
@@ -73,7 +87,7 @@
 }
 .auth__button {
   border: none;
-  margin: 0 auto;
+  margin: 69px auto 0 auto;
   padding-top: 13px;
   padding-bottom: 15px;
   width: 396px;
