@@ -24,7 +24,7 @@ function Login() {
           </div>
         </div>
       </form>
-      <button className="auth__button auth__button_type_login" type="submit">Войти</button>
+      <button className="auth__button" type="submit">Войти</button>
       <div className="auth__reg-container">
         <div className="auth__reg-question">Ещё не зарегистрированы?</div>
         <Link to="/signup" className="auth__reg-link">Регистрация</Link>
