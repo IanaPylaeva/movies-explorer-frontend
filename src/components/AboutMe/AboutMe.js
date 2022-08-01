@@ -1,6 +1,8 @@
 import React from "react";
 import './AboutMe.css';
 import Title from "../Title/Title";
+import photo from "../../images/vitaliy-photo.jpg";
+import arrow from "../../images/strelka-open.svg";
 
 function AboutMe() {
   return (
@@ -21,22 +23,22 @@ function AboutMe() {
               <li><a className="about-me__link" href="https://github.com/" target="_blank" rel="noreferrer">Github</a></li>
             </ul>          
           </div>
-          <div className="about-me__photo"></div>
+          <img className="about-me__photo" src={photo} alt="Фотография Виталия"></img>
         </div>
         <div className="about-me__portfolio-container">
-          <p className="about-me__title">Портфолио</p>
+          <p className="about-me__portfolio-title">Портфолио</p>
           <ul className="about-me__portfolio-list">
             <li className="about-me__portfolio-list-item">
               <div className="about-me__portfolio"></div>
-              <div className="about-me__portfolio-arrow"></div>
+              <a href="https://#" target="_blank" rel="noreferrer" class="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
             </li>
             <li className="about-me__portfolio-list-item">
               <div className="about-me__portfolio"></div>
-              <div className="about-me__portfolio-arrow"></div>
+              <a href="https://#" target="_blank" rel="noreferrer" class="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
             </li>
             <li className="about-me__portfolio-list-item">
               <div className="about-me__portfolio"></div>
-              <div className="about-me__portfolio-arrow"></div>
+              <a href="https://#" target="_blank" rel="noreferrer" class="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
             </li>
           </ul>
         </div>

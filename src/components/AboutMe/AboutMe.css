@@ -13,7 +13,8 @@
   border-top: 1px solid #000000;
 }
 .about-me__container {
-  margin: 0 auto 100px;
+  min-width: 100%;  
+  margin: 66px auto 100px;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -21,7 +22,105 @@
 .about-me__text-container {
   min-width: 600px;
   max-width: 600px;
-  margin: 66 px 0 0;
+  margin: 0 270px 0 0;
   display: flex;
   flex-direction: column;
+}
+.about-me__title {
+  min-width: 100%;
+  margin: 0;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+}
+.about-me__subtitle {
+  margin: 18px 0 26px 0;
+  min-width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+  mix-blend-mode: normal;  
+}
+.about-me__text {
+  min-width: 100%;
+  margin: 0 0 99px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.57;
+  mix-blend-mode: normal;
+}
+.about-me__list-links {
+  min-width: 132px;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+}
+.about-me__link {
+  max-width: 66px;
+  margin: 0 20px 0 0;
+}
+.about-me__link:last-child {
+  max-width: 66px;
+  margin: 0;
+}
+.about-me__photo {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  display: flex;
+}
+.about-me__portfolio-container {
+  margin: 0;
+  padding: 0;
+  min-width: 1140px;
+  display: flex;
+  flex-direction: column;
+}
+.about-me__portfolio-title {
+  min-width: 250px;
+  margin: 0 auto 50px 0;
+  text-align: left;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.11;
+  color: #A0A0A0;
+  mix-blend-mode: normal;
+}
+.about-me__portfolio-list {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.67;
+  letter-spacing: -0.04em;
+}
+.about-me__portfolio-list-item {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  margin: 19px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid #E8E8E8;
+}
+.about-me__portfolio-list-item:first-child {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+.about-me__portfolio {
+  min-width: 880px;
+  margin: 0 auto 0 0;
+}
+.about-me__portfolio-arrow {
+  width: 29px;
+  height: 60px;
+  display: flex;
+  margin: 0 0 0 auto;
 }
