@@ -1,7 +1,7 @@
 import React from "react";
 import './Login.css';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo.svg';
+import Welcome from "../Welcome/Welcome";
 
 function Login() {
   function handleSubmit(evt) {
@@ -10,10 +10,7 @@ function Login() {
 
   return (
     <section className="auth">
-      <div className="auth__container">
-        <img src={logo} alt="логотип" className="logo" />
-        <h2 className="auth__title">Рады видеть!</h2>
-      </div>
+      <Welcome title="Рады видеть" />
       <form className="auth__form auth__form_type_login" onSubmit={handleSubmit} name="auth-form">
         <div className="auth__inputs">
           <div className="auth__input-container">          
@@ -27,7 +24,7 @@ function Login() {
           </div>
         </div>
       </form>
-      <button className="auth__button" type="submit">Войти</button>
+      <button className="auth__button auth__button_type_login" type="submit">Войти</button>
       <div className="auth__reg-container">
         <div className="auth__reg-question">Ещё не зарегистрированы?</div>
         <Link to="/signup" className="auth__reg-link">Регистрация</Link>

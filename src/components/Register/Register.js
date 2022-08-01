@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import './Register.css';
-import logo from '../../images/logo.svg';
+import Welcome from "../Welcome/Welcome";
 
 function Register() {
   function handleSubmit(evt) {
@@ -10,10 +10,7 @@ function Register() {
 
   return (
     <section className="auth">
-      <div className="auth__container">
-        <img src={logo} alt="логотип" className="auth__logo" />
-        <h2 className="auth__title">Добро пожаловать!</h2>
-      </div>
+      <Welcome title="Добро пожаловать" />
       <form className="auth__form" onSubmit={handleSubmit} name="auth-form">
         <div className="auth__inputs">
           <div className="auth__input-container">          

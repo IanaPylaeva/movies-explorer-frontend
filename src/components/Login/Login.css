@@ -1,3 +1,6 @@
 .auth__form_type_login {
-  margin-bottom: 221px;
+  padding-bottom: 42px;
+}
+.auth__button_type_login {
+  margin: 179px auto 0 auto;
 }
