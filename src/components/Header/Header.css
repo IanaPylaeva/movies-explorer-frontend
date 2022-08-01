@@ -1,8 +1,9 @@
 .header {
   max-width: 1280px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
+  flex-direction: row;
 }
 .logo {
   width: 38px;

@@ -16,30 +16,16 @@ function App() {
     <div className="page">
       <Header loggedIn={true} />
       <Routes>
-        <Route exact path="/" element={
-          <Main />
-        }></Route>
-        <Route exact path="/movies" element={
-          <Movies />
-        }></Route>
-        <Route exact path="/saved-movies" element={
-          <SavedMovies />
-        }></Route>
-        <Route exact path="/profile" element={
-          <Profile />
-        } ></Route>
-        </Routes>
-        <Footer />
-        <Routes>
-        <Route  path="/signin" element={
-          <Login />
-        }></Route>
-        <Route  path="/signup" element={
-          <Register />
-        }></Route>
-        <Route  path="*" element={
-          <PageNotFound />
-        }></Route>
+        <Route exact path="/" element={ <Main /> }></Route>
+        <Route exact path="/movies" element={ <Movies /> }></Route>
+        <Route exact path="/saved-movies" element={ <SavedMovies /> }></Route>
+        <Route exact path="/profile" element={ <Profile /> }></Route>
+      </Routes>
+      <Footer />
+      <Routes>
+        <Route path="/signin" element={ <Login /> }></Route>
+        <Route path="/signup" element={ <Register /> }></Route>
+        <Route path="*" element={ <PageNotFound /> }></Route>
       </Routes>
     </div>
   );
