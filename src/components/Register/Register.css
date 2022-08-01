@@ -81,13 +81,13 @@
 }
 .auth__reg-container {
   margin: 16px auto 70px;
-  max-width: 217px;
+  min-width: 217px;
   display: flex;
   font-size: 14px;
   line-height: 1.21;
 }
 .auth__reg-question {
-  max-width: 169px;
+  min-width: 169px;
   margin: 0 6px 0 0;
   font-weight: 400;
   text-align: center;  
@@ -96,7 +96,7 @@
 .auth__reg-link {
   border: none;
   text-decoration: none;
-  max-width: 42px;
+  min-width: 42px;
   margin: 0;
   font-weight: 400;
   text-align: center;  
