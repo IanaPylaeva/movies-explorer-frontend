@@ -1,7 +1,7 @@
 .about-project {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 110px 0 141px 0;
+  padding: 110px 0 110px 0;
   display: flex;
   flex-direction: column;
 }
@@ -31,12 +31,14 @@
 }
 .about-project__text-title {
   min-width: 100%;
+  margin: 0;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.04em;
 }
 .about-project__text {
   min-width: 100%;
+  margin: 26px 0 0 0;
   font-size: 14px;
   line-height: 1.43;
 }
@@ -49,8 +51,6 @@
   display: flex;
   flex-direction: row;
 }
-
-
 .about-project__container-back-end {
   width: 228px;
   margin: 0;
