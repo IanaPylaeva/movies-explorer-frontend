@@ -14,7 +14,6 @@
   border-radius: 9px;
 }
 .search-form__film-container {
-  max-width: 913px;
   min-width: 913px;
   margin: 0;
   padding: 19px;
@@ -22,10 +21,10 @@
   flex-direction: row;
 }
 .search-form__button-loupe {
-  margin: 0 10px 0 0;
+  margin: 6px 16px 6px 6px;
   padding: 0;
-  width: 34px;
-  height: 34px;
+  width: 22px;
+  height: 22px;
 }
 .search-form__input-film {
   min-width: 680px;
@@ -41,13 +40,24 @@
 }
 .search-form__button-find {
   width: 34px;
-  height: 34px;  
+  height: 34px;
   background-image: url(../../images/find-strelka.svg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(0, 0, 0, 0);
-  margin: 0 0 0 46px;
-  padding: 0;
   border: none;
+  margin: 0 0 0 auto;
+}
+.search-form__short-film-container {
+  margin: 16px 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #E8E8E8;
+}
+.search-form__button-switch {
+  margin: 10px 14px 10px 29px;
+  width: 36px;
+  height: 20px;
 }

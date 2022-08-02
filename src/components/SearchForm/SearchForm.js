@@ -12,13 +12,14 @@ function SearchForm() {
           <button className="search-form__button-find" type="submit"></button>
         </div>
         <div className="search-form__short-film-container">
-          <button className="search-form__button-switch"></button>
+          <button className="search-form__button-switch">
+            <span className="slider" />
+          </button>
           <p className="search-form__text">Короткометражки</p>
         </div>
       </div>
     </section>
   )
-
 }
 
 export default SearchForm;
