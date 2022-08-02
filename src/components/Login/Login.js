@@ -16,6 +16,7 @@ function Login() {
           <div className="auth__input-container">          
             <p className="auth__text">E-mail</p>
             <input className="auth__input" value="pochta@yandex.ru" placeholder="E-mail" type="email" name="email" minLength="1" maxLength="50"  required />            
+            <span className="auth__input-error"></span>
           </div>
           <div className="auth__input-container">          
             <p className="auth__text">Пароль</p>

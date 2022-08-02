@@ -15,10 +15,12 @@ function Profile() {
           <div className="profile__input-container">          
             <p className="profile__text">Имя</p>
             <input className="profile__input" value="Виталий" placeholder="Имя" type="text" name="name" minLength="1" maxLength="50" required />
+            <span className="profile__input-error"></span>
           </div>
           <div className="profile__input-container">          
             <p className="profile__text">E-mail</p>
             <input className="profile__input" value="pochta@yandex.ru" placeholder="E-mail" type="email" name="email" minLength="1" maxLength="50"  required />
+            <span className="profile__input-error"></span>
           </div>
         </div>
       </form>
