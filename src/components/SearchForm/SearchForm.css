@@ -1,0 +1,53 @@
+.search-form {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+}
+.search-form__container {
+  max-width: 1140px;
+  margin: 70px auto 80px auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #F4F4F4;
+  border-radius: 9px;
+}
+.search-form__film-container {
+  max-width: 913px;
+  min-width: 913px;
+  margin: 0;
+  padding: 19px;
+  display: flex;
+  flex-direction: row;
+}
+.search-form__button-loupe {
+  margin: 0 10px 0 0;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+}
+.search-form__input-film {
+  min-width: 680px;
+  text-decoration: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  margin: auto 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.11;
+  color: #A0A0A0;
+}
+.search-form__button-find {
+  width: 34px;
+  height: 34px;  
+  background-image: url(../../images/find-strelka.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0 0 0 46px;
+  padding: 0;
+  border: none;
+}
