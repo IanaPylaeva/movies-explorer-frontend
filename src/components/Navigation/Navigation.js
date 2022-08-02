@@ -26,7 +26,7 @@ function Navigation() {
               <NavLink to="/saved-movies" className="navigation__link" activeClassName="navigation__link_active">Сохранённые фильмы</NavLink>
             </li>
           </ul>
-          <NavLink to="/profile" className="navigation__link" activeClassName="navigation__link_active">Аккаунт</NavLink>
+          <NavLink to="/profile" className="navigation__link-button" activeClassName="navigation__link-button_active">Аккаунт</NavLink>
         </div>
       </div>
     </nav>
