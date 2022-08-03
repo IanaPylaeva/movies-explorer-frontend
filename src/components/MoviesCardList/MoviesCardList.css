@@ -10,7 +10,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 364px);
-  grid-template-rows: repeat(2, 271px);
+  grid-template-rows: repeat(auto, 271px);
   grid-auto-columns: 364px;
   grid-auto-rows: 271px;
   row-gap: 30px;
@@ -20,7 +20,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
-  display: flex;
+  display: none;
 }
 .movies-card-list__button-more {
   min-width: 320px;
@@ -37,4 +37,7 @@
   align-items: center;
   text-align: center;  
   color: #000000;
+}
+.movies-card-list__container-more_active {
+  display: flex;
 }

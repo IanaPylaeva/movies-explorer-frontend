@@ -1,12 +1,13 @@
 .search-form {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1140px;
+  margin: 0 auto 10px auto;
   padding: 0;
   display: flex;
+  border-bottom: 1px solid #E8E8E8;
 }
 .search-form__container {
   max-width: 1140px;
-  margin: 70px auto 80px auto;
+  margin: 70px auto 69px auto;
   padding: 0;
   display: flex;
   flex-direction: row;

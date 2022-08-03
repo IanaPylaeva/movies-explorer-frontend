@@ -32,7 +32,7 @@ function MoviesCardList() {
         <MoviesCard isSaved={false} image={image11} />
         <MoviesCard isSaved={false} image={image12} />
       </div>
-      <div className="movies-card-list__container-more">
+      <div className="movies-card-list__container-more movies-card-list__container-more_active">
         <button className="movies-card-list__button-more" type="button">Ещё</button>
       </div>
     </section>
