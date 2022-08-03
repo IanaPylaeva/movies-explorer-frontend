@@ -30,15 +30,12 @@
 }
 .auth__text {
   min-width: 100%;
-  margin: 0 0 5px 0;
+  margin: 0;
   padding: 0;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;  
   color: #A0A0A0;
-}
-.auth__text:first-child {
-  margin-top: 0;
 }
 .auth__input {
   margin: 0;
