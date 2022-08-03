@@ -12,9 +12,10 @@ function SearchForm() {
           <button className="search-form__button-find" type="submit"></button>
         </div>
         <div className="search-form__short-film-container">
-          <button className="search-form__button-switch">
-            <span className="slider" />
-          </button>
+          <div className="search-form__button-switch">
+            <input className="search-form__input-switch" type="checkbox" checked />
+            <span className="search-form__slider" />
+          </div>
           <p className="search-form__text">Короткометражки</p>
         </div>
       </div>
