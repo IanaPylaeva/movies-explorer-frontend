@@ -25,7 +25,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FFFFFF;
+  background-color: #EBEBEB;
   transition: .4s;
 }
 .filter-check-box__slider:hover {
@@ -38,7 +38,7 @@
   height: 16px;
   left: 2px;
   bottom: 2px;
-  background-color: #2BE080;
+  background-color: #F5F5F5;
   transition: .4s;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
