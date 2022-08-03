@@ -55,6 +55,10 @@
   background-color: rgba(0, 0, 0, 0);
   object-fit: contain;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.movies-card__button:hover {
+  opacity: .6;
 }
 .movies-card__button_type_saved {
   background-image: url(../../images/zakladka.svg);

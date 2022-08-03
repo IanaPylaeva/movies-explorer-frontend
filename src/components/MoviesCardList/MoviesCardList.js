@@ -19,18 +19,18 @@ function MoviesCardList() {
   return(
     <section className="movies-card-list">
       <div className="movies-card-list__container">
-        <MoviesCard isSaved={false} image={image1} />
-        <MoviesCard isSaved={false} image={image2} />
-        <MoviesCard isSaved={true} image={image3} />
-        <MoviesCard isSaved={false} image={image4} />
-        <MoviesCard isSaved={true} image={image5} />
-        <MoviesCard isSaved={false} image={image6} />
-        <MoviesCard isSaved={false} image={image7} />
-        <MoviesCard isSaved={false} image={image8} />
-        <MoviesCard isSaved={false} image={image9} />
-        <MoviesCard isSaved={true} image={image10} />
-        <MoviesCard isSaved={false} image={image11} />
-        <MoviesCard isSaved={false} image={image12} />
+        <MoviesCard isSaved={false} image={image1} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image2} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={true} image={image3} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image4} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={true} image={image5} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image6} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image7} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image8} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image9} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={true} image={image10} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image11} title="33 слова о дизайне" time="1ч 47м" />
+        <MoviesCard isSaved={false} image={image12} title="33 слова о дизайне" time="1ч 47м" />
       </div>
       <div className="movies-card-list__container-more movies-card-list__container-more_active">
         <button className="movies-card-list__button-more" type="button">Ещё</button>

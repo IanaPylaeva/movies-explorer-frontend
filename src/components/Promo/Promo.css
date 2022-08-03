@@ -44,4 +44,8 @@
   color: #000000;
   margin: 10px auto 10px;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.promo__link:hover {
+  opacity: .6;
 }

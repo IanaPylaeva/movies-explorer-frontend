@@ -13,6 +13,10 @@
   margin: 0 auto 0 0;
   padding: 0;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.welcome__logo:hover {
+  opacity: .6;
 }
 .welcome__title {
   min-width: 396px;

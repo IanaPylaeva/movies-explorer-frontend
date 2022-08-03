@@ -9,8 +9,8 @@ function Header({ loggedIn }) {
   
   return (
     <header className="header">
-      <Link to="/" className="logo__link">
-        <img src={logo} alt="логотип" className="logo" />
+      <Link to="/" className="header__logo-link">
+        <img src={logo} alt="логотип" className="header__logo" />
       </Link>
       {!loggedIn && <NavTab />}
       {loggedIn && <Navigation />}

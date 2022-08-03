@@ -38,6 +38,10 @@
   text-align: center;  
   color: #000000;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.movies-card-list__button-more:hover {
+  opacity: .6;
 }
 .movies-card-list__container-more_active {
   display: flex;

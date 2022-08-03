@@ -1,5 +1,5 @@
 .nav-tab {
-  margin: 21px 70px 21px auto;
+  margin: 21px 0 21px auto;
   padding: 0;
   max-width: 183px;
   display: flex;
@@ -16,6 +16,10 @@
   text-decoration: none;
   color: #000000;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.nav-tab__reg:hover {
+  opacity: .6;
 }
 .nav-tab__auth {
   min-width: 76px;
@@ -29,4 +33,8 @@
   color: #FFFFFF;
   text-decoration: none;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.nav-tab__auth:hover {
+  opacity: .6;
 }

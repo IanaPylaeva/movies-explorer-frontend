@@ -20,13 +20,13 @@ function Navigation() {
               <Link to="/" className="navigation__link">Главная</Link>
             </li>
             <li className="navigation__list-item">
-              <NavLink to="/movies" className="navigation__link" activeClassName="navigation__link_active">Фильмы</NavLink>
+              <NavLink to="/movies" className="navigation__link">Фильмы</NavLink>
             </li>
             <li className="navigation__list-item">
-              <NavLink to="/saved-movies" className="navigation__link" activeClassName="navigation__link_active">Сохранённые фильмы</NavLink>
+              <NavLink to="/saved-movies" className="navigation__link">Сохранённые фильмы</NavLink>
             </li>
           </ul>
-          <NavLink to="/profile" className="navigation__link-button" activeClassName="navigation__link-button_active">Аккаунт</NavLink>
+          <NavLink to="/profile" className="navigation__link-button">Аккаунт</NavLink>
         </div>
       </div>
     </nav>

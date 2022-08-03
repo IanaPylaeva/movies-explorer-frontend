@@ -76,6 +76,10 @@
   text-align: center;  
   color: #FFFFFF;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.auth__button:hover {
+  opacity: .6;
 }
 .auth__reg-container {
   margin: 16px auto 70px;
@@ -100,4 +104,8 @@
   text-align: center;  
   color: #3456F3;
   cursor: pointer;
+  transition: opacity .3s ease;
+}
+.auth__reg-link:hover {
+  opacity: .6;
 }

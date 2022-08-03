@@ -2,7 +2,6 @@ import React from "react";
 import './AboutMe.css';
 import Title from "../Title/Title";
 import photo from "../../images/vitaliy-photo.jpg";
-import arrow from "../../images/strelka-open.svg";
 
 function AboutMe() {
   return (
@@ -24,23 +23,6 @@ function AboutMe() {
             </ul>          
           </div>
           <img className="about-me__photo" src={photo} alt="Фотография Виталия"></img>
-        </div>
-        <div className="about-me__portfolio-container">
-          <p className="about-me__portfolio-title">Портфолио</p>
-          <ul className="about-me__portfolio-list">
-            <li className="about-me__portfolio-list-item">
-              <p className="about-me__portfolio">Статичный сайт</p>
-              <a href="https://#" target="_blank" rel="noreferrer" className="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
-            </li>
-            <li className="about-me__portfolio-list-item">
-              <p className="about-me__portfolio">Адаптивный сайт</p>
-              <a href="https://#" target="_blank" rel="noreferrer" className="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
-            </li>
-            <li className="about-me__portfolio-list-item">
-              <p className="about-me__portfolio">Одностраничное приложение</p>
-              <a href="https://#" target="_blank" rel="noreferrer" className="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
