@@ -37,6 +37,7 @@
   align-items: center;
   text-align: center;  
   color: #000000;
+  cursor: pointer;
 }
 .movies-card-list__container-more_active {
   display: flex;

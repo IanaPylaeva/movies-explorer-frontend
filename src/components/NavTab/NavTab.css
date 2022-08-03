@@ -15,6 +15,7 @@
   text-align: center;
   text-decoration: none;
   color: #000000;
+  cursor: pointer;
 }
 .nav-tab__auth {
   min-width: 76px;
@@ -27,4 +28,5 @@
   text-align: center; 
   color: #FFFFFF;
   text-decoration: none;
+  cursor: pointer;
 }

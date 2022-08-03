@@ -44,3 +44,13 @@
 .footer__link:last-child {
   margin: 0;
 }
+.footer__link-name {
+  margin: 00;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.23;
+  text-align: right;  
+  color: #000000;
+  cursor: pointer;
+}

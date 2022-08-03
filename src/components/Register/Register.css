@@ -75,6 +75,7 @@
   line-height: 1.214;
   text-align: center;  
   color: #FFFFFF;
+  cursor: pointer;
 }
 .auth__reg-container {
   margin: 16px auto 70px;
@@ -98,4 +99,5 @@
   font-weight: 400;
   text-align: center;  
   color: #3456F3;
+  cursor: pointer;
 }

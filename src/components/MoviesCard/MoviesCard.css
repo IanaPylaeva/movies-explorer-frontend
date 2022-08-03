@@ -54,6 +54,7 @@
   background-position: center;
   background-color: rgba(0, 0, 0, 0);
   object-fit: contain;
+  cursor: pointer;
 }
 .movies-card__button_type_saved {
   background-image: url(../../images/zakladka.svg);
