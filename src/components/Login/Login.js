@@ -27,7 +27,7 @@ function Login() {
       </form>
       <button className="auth__button" type="submit">Войти</button>
       <div className="auth__reg-container">
-        <div className="auth__reg-question">Ещё не зарегистрированы?</div>
+        <p className="auth__reg-question">Ещё не зарегистрированы?</p>
         <Link to="/signup" className="auth__reg-link">Регистрация</Link>
       </div>
     </section>

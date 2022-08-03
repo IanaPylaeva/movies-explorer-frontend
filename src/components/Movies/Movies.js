@@ -5,10 +5,10 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 
 function Movies() {
   return (
-    <div className="movies">
+    <section className="movies">
       <SearchForm />
       <MoviesCardList />
-    </div>
+    </section>
   )
 }
 

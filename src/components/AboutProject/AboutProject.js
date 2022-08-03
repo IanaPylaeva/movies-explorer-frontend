@@ -4,7 +4,7 @@ import Title from "../Title/Title";
 
 function AboutProject() {
   return (
-    <div className="about-project">
+    <section className="about-project">
       <Title title="О проекте" />
       <div className="about-project__container">
         <div className="about-project__text-container">
@@ -28,7 +28,7 @@ function AboutProject() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

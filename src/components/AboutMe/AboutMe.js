@@ -30,15 +30,15 @@ function AboutMe() {
           <ul className="about-me__portfolio-list">
             <li className="about-me__portfolio-list-item">
               <p className="about-me__portfolio">Статичный сайт</p>
-              <a href="https://#" target="_blank" rel="noreferrer" class="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
+              <a href="https://#" target="_blank" rel="noreferrer" className="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
             </li>
             <li className="about-me__portfolio-list-item">
               <p className="about-me__portfolio">Адаптивный сайт</p>
-              <a href="https://#" target="_blank" rel="noreferrer" class="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
+              <a href="https://#" target="_blank" rel="noreferrer" className="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
             </li>
             <li className="about-me__portfolio-list-item">
               <p className="about-me__portfolio">Одностраничное приложение</p>
-              <a href="https://#" target="_blank" rel="noreferrer" class="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
+              <a href="https://#" target="_blank" rel="noreferrer" className="about-me__portfolio-arrow"><img src={arrow} alt="стрелка-ссылка" /></a>
             </li>
           </ul>
         </div>

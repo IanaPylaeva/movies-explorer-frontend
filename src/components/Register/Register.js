@@ -32,7 +32,7 @@ function Register() {
       </form>
       <button className="auth__button" type="submit">Зарегистрироваться</button>
       <div className="auth__reg-container">
-        <div className="auth__reg-question">Уже зарегистрированы?</div>
+        <p className="auth__reg-question">Уже зарегистрированы?</p>
         <Link to="/signin" className="auth__reg-link">Войти</Link>
       </div>
     </section>
