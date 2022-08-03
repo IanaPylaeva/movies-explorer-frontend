@@ -21,14 +21,14 @@ function MoviesCardList() {
       <div className="movies-card-list__container">
         <MoviesCard isSaved={false} image={image1} />
         <MoviesCard isSaved={false} image={image2} />
-        <MoviesCard isSaved={false} image={image3} />
+        <MoviesCard isSaved={true} image={image3} />
         <MoviesCard isSaved={false} image={image4} />
-        <MoviesCard isSaved={false} image={image5} />
+        <MoviesCard isSaved={true} image={image5} />
         <MoviesCard isSaved={false} image={image6} />
         <MoviesCard isSaved={false} image={image7} />
         <MoviesCard isSaved={false} image={image8} />
         <MoviesCard isSaved={false} image={image9} />
-        <MoviesCard isSaved={false} image={image10} />
+        <MoviesCard isSaved={true} image={image10} />
         <MoviesCard isSaved={false} image={image11} />
         <MoviesCard isSaved={false} image={image12} />
       </div>
