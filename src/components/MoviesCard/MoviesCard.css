@@ -70,4 +70,9 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  cursor: pointer;
+  transition: opacity .3s ease;
+}
+.movies-card__image:hover {
+  opacity: .6;
 }

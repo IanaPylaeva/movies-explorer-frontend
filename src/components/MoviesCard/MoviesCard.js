@@ -4,6 +4,11 @@ import { useMatch } from 'react-router-dom';
 
 function MoviesCard(props) {
   const isSavedMoviesRoute = useMatch({ path: '/saved-movies', exact: false });
+
+  function handleClick() {
+    props.onCardClick(props.card);
+  }
+
   return (
     <section className="movies-card">
       <div className="movies-card__container">
@@ -16,7 +21,7 @@ function MoviesCard(props) {
           type="button">
         </button>
       </div>
-      <img src={props.image} className="movies-card__image" alt="изображение фильма"></img>
+      <img src={props.card} className="movies-card__image" alt="изображение фильма" onClick={handleClick}></img>
     </section>
   )
 }

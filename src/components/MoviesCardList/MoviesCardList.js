@@ -15,22 +15,36 @@ import image10 from '../../images/movies-cards/movie-card-10.jpg';
 import image11 from '../../images/movies-cards/movie-card-11.jpg';
 import image12 from '../../images/movies-cards/movie-card-12.jpg';
 
-function MoviesCardList() {
+const cards = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+];
+
+function MoviesCardList(props) {
   return(
     <section className="movies-card-list">
       <div className="movies-card-list__container">
-        <MoviesCard isSaved={false} image={image1} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image2} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={true} image={image3} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image4} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={true} image={image5} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image6} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image7} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image8} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image9} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={true} image={image10} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image11} title="33 слова о дизайне" time="1ч 47м" />
-        <MoviesCard isSaved={false} image={image12} title="33 слова о дизайне" time="1ч 47м" />
+      {cards.map((card) => {
+        return (
+        <MoviesCard
+          key={card._id}
+          card={card}
+          onCardClick={props.onCardClick}
+          title="33 слова о дизайне"
+          time="1ч 47м"
+        />
+        )})
+      }
       </div>
       <div className="movies-card-list__container-more movies-card-list__container-more_active">
         <button className="movies-card-list__button-more" type="button">Ещё</button>
