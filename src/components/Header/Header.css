@@ -22,3 +22,17 @@
 .header__logo:hover {  
   opacity: .6;
 }
+
+@media screen and (max-width: 900px) {
+  .header {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+  max-width: 320px;
+  padding: 0 14px;
+  }  
+}

@@ -7,10 +7,9 @@
 }
 .about-me__info {
   min-width: 1140px;
-  margin: 23px auto 100px;
+  margin: 0 auto 100px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #000000;
 }
 .about-me__container {
   min-width: 100%;  
@@ -83,4 +82,25 @@
   height: 327px;
   border-radius: 10px;
   display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .about-me {
+    max-width: 768px;
+    margin: 0 auto;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .about-me {
+    max-width: 320px;
+    margin: 0 auto;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+  }
+
 }

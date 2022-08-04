@@ -46,3 +46,22 @@
 .movies-card-list__container-more_active {
   display: flex;
 }
+
+@media screen and (max-width: 900px) {
+  .movies-card-list {
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .movies-card-list {
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

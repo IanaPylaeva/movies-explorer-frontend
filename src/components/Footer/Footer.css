@@ -58,3 +58,24 @@
 .footer__link-name:hover {
   opacity: .6;
 }
+
+@media screen and (max-width: 900px) {
+  .footer {
+    max-width: 768px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .footer {
+    max-width: 3200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

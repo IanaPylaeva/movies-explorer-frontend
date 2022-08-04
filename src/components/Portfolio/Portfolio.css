@@ -63,3 +63,26 @@
 .portfolio__arrow:first-child {
   padding-top: 0;
 }
+
+@media screen and (max-width: 900px) {
+  .portfolio {
+    margin: 0 auto 125px auto;
+    padding: 0;
+    min-width: 768px;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .portfolio {
+    margin: 0 auto 125px auto;
+    padding: 0;
+    min-width: 320px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

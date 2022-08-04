@@ -55,3 +55,24 @@
 .search-form__button-find:hover {
   opacity: .6;
 }
+
+@media screen and (max-width: 900px) {
+  .search-form {
+    max-width: 768px;
+    margin: 0 auto 10px auto;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .search-form {
+    max-width: 320px;
+    margin: 0 auto 10px auto;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #E8E8E8;
+  }
+  
+}

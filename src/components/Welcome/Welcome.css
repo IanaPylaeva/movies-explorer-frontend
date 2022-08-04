@@ -26,3 +26,16 @@
   line-height: 1.21;
   text-align: left;
 }
+
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 500px) {
+  .welcome {
+    max-width: 200px;
+    margin: 70px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

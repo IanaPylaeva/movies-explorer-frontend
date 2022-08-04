@@ -38,3 +38,23 @@
 .nav-tab__auth:hover {
   opacity: .6;
 }
+
+@media screen and (max-width: 500px) {
+  .nav-tab {
+    margin: 24px 0 24px auto;
+    max-width: 132px;
+    font-size: 10px;
+    line-height: 1.6;
+  }  
+  .nav-tab__reg {
+    max-width: 64px;
+    margin: 0 14px 0 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .nav-tab__auth {
+    min-width: 54px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}

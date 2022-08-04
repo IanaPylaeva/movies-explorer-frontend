@@ -76,3 +76,10 @@
 .movies-card__image:hover {
   opacity: .6;
 }
+
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 500px) {
+  
+}
