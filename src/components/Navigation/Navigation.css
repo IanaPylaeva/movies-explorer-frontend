@@ -188,11 +188,10 @@
   }  
   .navigation__button-menu {
     display: flex;
-    width: 40px;
+    width: 38px;
     height: 43px;
     padding: 12.5px 9px 10px 9px;
     background-size: contain;
     margin: 15px 14px 16px auto;
-  }
-  
+  }  
 }
