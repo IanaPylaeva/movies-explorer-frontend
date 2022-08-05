@@ -61,8 +61,28 @@
 }
 
 @media screen and (max-width: 900px) {
-
+  .filter-check-box {
+    border-left: 1px solid #CBCBCB;
+  }
+  .filter-check-box__button-switch {
+    margin: 10px 15px 10px 19px;
+  }
+  .filter-check-box__text {
+    margin: auto 20px auto 0;
+  }
 }
+
 @media screen and (max-width: 500px) {
-  
+  .filter-check-box {
+    margin: 0 auto;
+    border-left: none;
+  }
+  .filter-check-box__button-switch {
+    margin: 0 13px 0 0;
+  }
+  .filter-check-box__text {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.64;
+  }  
 }
