@@ -78,34 +78,10 @@
     row-gap: 16px;
   }
   .movies-card-list__container-more {
-    max-width: 1280px;
+    max-width: 320px;
     margin: 0 auto;
-    padding: 0;
-    display: none;
   }
   .movies-card-list__button-more {
-    min-width: 320px;
-    margin: 50px auto 80px;
-    padding-top: 11px;
-    padding-bottom: 9px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid #E8E8E8;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.25;
-    align-items: center;
-    text-align: center;  
-    color: #000000;
-    cursor: pointer;
-    transition: opacity .3s ease;
-  }
-  .movies-card-list__button-more:hover {
-    opacity: .6;
-  }
-  .movies-card-list__container-more_active {
-    display: flex;
-  }
-  
+    min-width: 240px;
+  }  
 }
