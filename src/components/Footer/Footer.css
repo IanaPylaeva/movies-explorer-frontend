@@ -16,6 +16,7 @@
 }
 .footer__container {
   max-width: 1140px;
+  min-width: 1140px;
   margin: 0 auto;
   padding-top: 20px;
   display: flex;
@@ -64,6 +65,7 @@
   }
   .footer__container {
     max-width: 708px;
+    min-width: 708px;
     font-size: 13px;
     line-height: 1.23;
   }
@@ -71,6 +73,7 @@
 @media screen and (max-width: 500px) {
   .footer {
     max-width: 320px;
+    min-width: 320px;
     padding-bottom: 10px;
   }
   .footer__title {
@@ -81,6 +84,8 @@
   }
   .footer__container {
     max-width: 300px;
+    min-width: 300px;
+    padding-top: 30px;
     font-size: 12px;
     line-height: 1.25;
     flex-direction: column-reverse;

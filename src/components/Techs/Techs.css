@@ -16,6 +16,7 @@
 .techs__title {
   min-width: 600px;
   margin: 90px auto 26px;
+  font-weight: 400;
   font-size: 50px;
   line-height: 1.16;
   text-align: center;
@@ -85,6 +86,7 @@
   .techs {
     max-width: 320px;
     padding: 70px 0;
+    background-color: rgba(0, 0, 0, 0);
   }
   .techs__container {
     min-width: 292px;
