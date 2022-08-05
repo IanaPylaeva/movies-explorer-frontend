@@ -1,16 +1,17 @@
 .movies {
-  min-width: 1280px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 @media screen and (max-width: 900px) {
   .movies {
-    min-width: 768px;
+    max-width: 768px;
   }
-
 }
+
 @media screen and (max-width: 500px) {
   .movies {
-    min-width: 320px;
-  }
-  
+    max-width: 320px;
+  }  
 }
