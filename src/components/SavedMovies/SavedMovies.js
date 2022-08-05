@@ -17,7 +17,7 @@ function SavedMovies(props) {
   return (
     <section className="movies-card-list">
       <SearchForm />
-      <div className="movies-card-list__container">
+      <div className="movies-card-list__container movies-card-list__container_type_saved">
       {cards.map((card) => {
         return (
         <MoviesCard

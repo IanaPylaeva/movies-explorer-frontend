@@ -10,7 +10,7 @@ function MoviesCard(props) {
   }
 
   return (
-    <section className="movies-card">
+    <section className={`movies-card ${isSavedMoviesRoute ? 'movies-card_type_saved' : ""}`}>
       <div className="movies-card__container">
         <div className="movies-card__text-container">
           <p className="movies-card__text">{props.title}</p>
