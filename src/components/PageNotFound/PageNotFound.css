@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 .page-not-found__title {
-  margin: 246px auto 5px auto;
+  margin: 246px auto 5px;
   padding: 0;
   max-width: 400px;
   font-weight: 400;
@@ -23,7 +23,7 @@
   text-align: center;
 }
 .page-not-found__link {
-  margin: 0 auto 60px auto;
+  margin: 0 auto 60px;
   max-width: 42px;
   text-decoration: none;
   font-weight: 400;
@@ -36,20 +36,35 @@
 @media screen and (max-width: 900px) {
   .page-not-found {
     max-width: 768px;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
   }
-
+  .page-not-found__title {
+    margin: 408px auto 5px;
+  }
+  .page-not-found__link {
+    margin: 0 auto 222px;
+  }
 }
+
 @media screen and (max-width: 500px) {
   .page-not-found {
     max-width: 320px;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  }
+  .page-not-found__title {
+    margin: 300px auto 10px auto;
+    max-width: 300px;
+    font-size: 80px;
+    line-height: 1.21;
+  }
+  .page-not-found__subtitle {
+    margin: 0 auto 284px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .page-not-found__link {
+    margin: 0 auto 30px auto;
+    max-width: 36px;
+    font-size: 12px;
+    line-height: 1.25;
   }
   
 }
