@@ -9,11 +9,13 @@ function Header({ loggedIn }) {
   
   return (
     <header className="header">
-      <Link to="/" className="header__logo-link">
-        <img src={logo} alt="логотип" className="header__logo" />
-      </Link>
-      {!loggedIn && <NavTab />}
-      {loggedIn && <Navigation />}
+      <div className="header__container">
+        <Link to="/" className="header__logo-link">
+          <img src={logo} alt="логотип" className="header__logo" />
+        </Link>
+        {!loggedIn && <NavTab />}
+        {loggedIn && <Navigation />}
+      </div>
     </header>
   );
 };
