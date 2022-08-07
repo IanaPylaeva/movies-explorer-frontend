@@ -10,7 +10,8 @@ function Navigation() {
   }
 
   return (
-    <nav className="navigation">
+    <nav className="navigation" >
+      <div className={`navigation__background ${showItems ? 'navigation__background_active' : ''}`}></div>
       <button className="navigation__button-menu" type="button" onClick={handleToggleMenu}></button>
       <div className={`navigation__container ${showItems ? 'navigation__container_active' : ''}`}>
         <button className="navigation__button-close" type="button" onClick={handleToggleMenu}></button>

@@ -10,7 +10,7 @@ function Register() {
 
   return (
     <section className="auth">
-      <Welcome title="Добро пожаловать" />
+      <Welcome title="Добро пожаловать!" />
       <form className="auth__form" onSubmit={handleSubmit} name="auth-form">
         <div className="auth__inputs">
           <div className="auth__input-container">          
