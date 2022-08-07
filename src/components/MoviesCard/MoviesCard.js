@@ -3,7 +3,7 @@ import './MoviesCard.css';
 import { useMatch } from 'react-router-dom';
 
 function MoviesCard(props) {
-  const isSavedMoviesRoute = useMatch({ path: '/saved-movies', exact: false });
+  const isSavedMoviesRoute = useMatch({ path: '/saved-movies', exact: true });
 
   function handleClick() {
     props.onCardClick(props.card);

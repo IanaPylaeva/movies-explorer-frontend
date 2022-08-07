@@ -3,14 +3,14 @@ import './Login.css';
 import { Link } from 'react-router-dom';
 import Welcome from "../Welcome/Welcome";
 
-function Login() {
+function Login(props) {
   function handleSubmit(evt) {
     evt.preventDefault();// Запрещаем браузеру переходить по адресу формы - не перезагружается
   }
 
   return (
     <section className="auth">
-      <Welcome title="Рады видеть" />
+      <Welcome title="Рады видеть" active={props.active} />
       <form className="auth__form auth__form_type_login" onSubmit={handleSubmit} name="auth-form">
         <div className="auth__inputs">
           <div className="auth__input-container">          
