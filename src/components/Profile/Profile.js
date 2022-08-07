@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import './Profile.css';
+import Welcome from "../Welcome/Welcome";
 
 function Profile() {
   function handleSubmit(evt) {
@@ -9,8 +10,8 @@ function Profile() {
 
   return (
     <section className="profile">
-      <form className="profile__form" onSubmit={handleSubmit} name="profile-form">
-        <h2 className="profile__title">Привет, 'Виталий'!</h2>
+      <form className="profile__form" onSubmit={handleSubmit} name="profile-form">        
+      <Welcome title="Привет, Виталий!" />
         <div className="profile__inputs">
           <div className="profile__input-container">          
             <p className="profile__text">Имя</p>

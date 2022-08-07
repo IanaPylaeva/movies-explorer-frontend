@@ -6,6 +6,10 @@
 }
 .welcome__logo-link {
   max-width: 38px;
+  display: block;
+}
+.welcome__logo-link_inactive {
+  display: none;
 }
 .welcome__logo {
   max-width: 38px;
@@ -26,16 +30,28 @@
   line-height: 1.21;
   text-align: left;
 }
+.welcome__title_type_profile {
+  min-width: 204px;
+  margin: 0 auto 123px;
+  text-align: center;
+}
 
 @media screen and (max-width: 900px) {
-
+  .welcome__title_type_profile {
+    min-width: 204px;
+    margin: 166px auto 96px;
+  }
 }
+
 @media screen and (max-width: 500px) {
   .welcome {
-    max-width: 200px;
+    max-width: 320px;
     margin: 70px auto 0 auto;
     display: flex;
     flex-direction: column;
   }
-  
+  .welcome__title_type_profile {
+    min-width: 204px;
+    margin: 0 auto 80px;
+  }  
 }
