@@ -1,6 +1,6 @@
 .welcome {
   max-width: 396px;
-  margin: 70px auto 0 auto;
+  margin: 70px auto 0;
   display: flex;
   flex-direction: column;
 }
@@ -41,17 +41,38 @@
     min-width: 204px;
     margin: 166px auto 96px;
   }
+  .welcome__logo-link {
+    max-width: 38px;
+    display: block;
+  }
+  .welcome__logo-link_inactive {
+    display: none;
+  }
+  .welcome__logo {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .welcome {
-    max-width: 320px;
-    margin: 70px auto 0 auto;
-    display: flex;
-    flex-direction: column;
+    max-width: 260px;
+    margin: 70px auto 0;
   }
   .welcome__title_type_profile {
     min-width: 204px;
     margin: 0 auto 80px;
-  }  
+  }
+  .welcome__title {
+    min-width: 260px;
+    margin: 50px auto 80px 0;
+    text-align: center;
+  }
+  .welcome__logo {
+    margin: 0 auto;
+  }
+  .welcome__logo-link {
+    max-width: 38px;
+    display: block;
+    margin: 0 auto;
+  }
 }
