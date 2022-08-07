@@ -1,5 +1,5 @@
 .nav-tab {
-  margin: 21px 0 21px auto;
+  margin: 21px 0 21px 919px;
   padding: 0;
   max-width: 183px;
   display: flex;
@@ -39,9 +39,15 @@
   opacity: .6;
 }
 
+@media screen and (max-width: 900px) {
+  .nav-tab {
+    margin: 21px 0 21px 487px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .nav-tab {
-    margin: 24px 0 24px auto;
+    margin: 24px 0 24px 122px;
     max-width: 132px;
     font-size: 10px;
     line-height: 1.6;
