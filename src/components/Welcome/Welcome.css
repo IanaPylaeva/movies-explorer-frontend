@@ -58,21 +58,19 @@
     max-width: 260px;
     margin: 70px auto 0;
   }
-  .welcome__title_type_profile {
-    min-width: 204px;
-    margin: 0 auto 80px;
-  }
   .welcome__title {
     min-width: 260px;
     margin: 50px auto 80px 0;
     text-align: center;
   }
+  .welcome__title_type_profile {
+    min-width: 204px;
+    margin: 0 auto 80px;
+  }
   .welcome__logo {
     margin: 0 auto;
   }
   .welcome__logo-link {
-    max-width: 38px;
-    display: block;
     margin: 0 auto;
   }
 }

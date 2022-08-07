@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useMatch } from 'react-router-dom';
 
 function Welcome(props) {
-  const isProfileRoute = useMatch({ path: '/profile', exact: true });
+  const isProfileRoute = useMatch({ path: '/profile', exact: false });
 
   return (
     <div className="welcome">
