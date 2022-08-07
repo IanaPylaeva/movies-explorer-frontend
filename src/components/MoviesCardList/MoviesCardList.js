@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import './MoviesCardList.css';
 import MoviesCard from "../MoviesCard/MoviesCard";
+import Preloader from "../Preloader/Preloader";
 
 import image1 from '../../images/movies-cards/movie-card-1.jpg';
 import image2 from '../../images/movies-cards/movie-card-2.jpg';
@@ -31,6 +32,10 @@ const cards = [
 ];
 
 function MoviesCardList(props) {
+const [isLoading, setLoading] = useState(false);
+function handlePreloader() {
+  setLoading(true);
+}
   return(
     <section className="movies-card-list">
       <div className="movies-card-list__container">
@@ -46,9 +51,11 @@ function MoviesCardList(props) {
         )})
       }
       </div>
+      {isLoading ? <Preloader /> : (
       <div className="movies-card-list__container-more movies-card-list__container-more_active">
-        <button className="movies-card-list__button-more" type="button">Ещё</button>
+        <button className="movies-card-list__button-more" type="button" name="more" onClick={handlePreloader}>Ещё</button>
       </div>
+      )}
     </section>
   )
 }
