@@ -197,7 +197,7 @@
   .navigation {
     min-width: 254px;
     max-width: 254px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: row;
