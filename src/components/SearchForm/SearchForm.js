@@ -1,7 +1,7 @@
 import React from "react";
 import './SearchForm.css';
 import loupe from '../../images/loupe.svg';
-import FilterCheckBox from '../FilterCheckbox/FilterCheckbox';
+import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm() {
   return (
@@ -12,7 +12,7 @@ function SearchForm() {
           <input className="search-form__input-film" placeholder="Фильм" type="text" required />
           <button className="search-form__button-find" type="submit"></button>
         </div>
-        <FilterCheckBox />
+        <FilterCheckbox />
       </div>
     </section>
   )

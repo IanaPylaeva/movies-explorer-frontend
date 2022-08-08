@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import './FilterCheckBox.css';
+import './FilterCheckbox.css';
 
-function FilterCheckBox() {
+function FilterCheckbox() {
   const [checked, setChecked] = useState(true);
 
   function handleChange() {
@@ -19,4 +19,4 @@ function FilterCheckBox() {
   )
 }
 
-export default FilterCheckBox;
+export default FilterCheckbox;
