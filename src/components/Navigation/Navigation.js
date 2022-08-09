@@ -9,8 +9,6 @@ function Navigation() {
     setShowItems(!showItems);
   }
   
-
-
   return (
     <nav className="navigation" >
       <button className="navigation__button-menu" type="button" onClick={handleToggleMenu}></button>
