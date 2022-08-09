@@ -81,7 +81,7 @@
 
 @media screen and (max-width: 900px) {
   .profile {
-    max-width: 768px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -94,7 +94,7 @@
 
 @media screen and (max-width: 500px) {
   .profile {
-    max-width: 320px;
+    max-width: 500px;
   }
   .profile__form {
     max-width: 260px;

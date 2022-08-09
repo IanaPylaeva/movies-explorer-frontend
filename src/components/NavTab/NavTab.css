@@ -39,11 +39,24 @@
   opacity: .6;
 }
 
+@media screen and (max-width: 1200px) {
+  .nav-tab {
+    margin: 21px 0 21px 400px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .nav-tab {
     margin: 21px 0 21px 487px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .nav-tab {
+    margin: 21px 0 21px 240px;
+  }
+}
+
 
 @media screen and (max-width: 500px) {
   .nav-tab {

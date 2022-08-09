@@ -111,12 +111,12 @@
 
 @media screen and (max-width: 900px) {
   .auth {
-    max-width: 768px;
+    max-width: 900px;
   }
 }
 @media screen and (max-width: 500px) {
   .auth {
-    max-width: 320px;
+    max-width: 500px;
   }
   .auth__form {
     max-width: 260px;

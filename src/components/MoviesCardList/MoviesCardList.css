@@ -17,6 +17,11 @@
   row-gap: 30px;
   column-gap: 24px;
 }
+.movies-card-list__container_type_saved {
+  grid-template-columns: repeat(3, 364px);
+  grid-template-rows: repeat(1, 271px);
+  margin-bottom: 30px;
+}
 .movies-card-list__container-more {
   max-width: 1280px;
   margin: 30px auto 0;
@@ -48,25 +53,72 @@
   display: flex;
 }
 
+@media screen and (max-width: 1200px) {
+  .movies-card-list {
+    max-width: 1200px;    
+  }
+  .movies-card-list__container {
+    max-width: 880px;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(6, 304px);
+    grid-auto-columns: 400px;
+    grid-auto-rows: 304px;
+  }
+  .movies-card-list__container_type_saved {
+    max-width: 880px;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 304px);
+    gap: 20px;
+  }
+  .movies-card-list__container-more {
+    max-width: 880px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .movies-card-list {
-    max-width: 768px;    
+    max-width: 900px;    
   }
   .movies-card-list__container {
     max-width: 708px;
     grid-template-columns: repeat(2, 339px);
     grid-template-rows: repeat(4, 258px);
+    grid-auto-columns: 339px;
+    grid-auto-rows: 258px;
     column-gap: 30px;
     row-gap: 36px;
+  }
+  .movies-card-list__container_type_saved {
+    grid-template-columns: repeat(2, 339px);
+    grid-template-rows: repeat(2, 258px);
+    margin-bottom: 30px;
   }
   .movies-card-list__container-more {
     max-width: 768px;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .movies-card-list {
+    max-width: 767px;    
+  }
+  .movies-card-list__container {
+    max-width: 490px;
+    grid-template-columns: repeat(2, 240px);
+    grid-template-rows: repeat(4, 230px);
+    grid-auto-columns: 240px;
+    grid-auto-rows: 230px;
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+  .movies-card-list__container-more {
+    max-width: 490px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .movies-card-list {
-    max-width: 320px;
+    max-width: 500px;
   }
   .movies-card-list__container {
     max-width: 300px;
@@ -83,5 +135,13 @@
   }
   .movies-card-list__button-more {
     min-width: 240px;
+  }
+  .movies-card-list__container_type_saved {
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: repeat(2, 236px);
+    margin-bottom: 30px;
+  }
+  .movies-card_type_saved:nth-child(n+3) {
+    display: none;
   }  
 }

@@ -78,9 +78,25 @@
   margin: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .about-me {
+    max-width: 1200px;
+  }
+  .about-me__info {
+    max-width: 880px;
+  }  
+  .about-me__text {
+    margin: 0 0 49px 0;
+  }
+  .about-me__text-container {
+    max-width: 364px;
+    margin: 0 49px 0 0;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .about-me {
-    max-width: 768px;
+    max-width: 900px;
     padding-top: 90px;
   }
   .about-me__info {
@@ -112,9 +128,24 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .about-me {
+    max-width: 480px;
+  }
+  .about-me__info {
+    max-width: 480px;
+  }  
+  .about-me__text {
+    margin: 0 0 19px 0;
+  }
+  .about-me__text-container {
+    margin: 0 19px 0 0;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .about-me {
-    max-width: 320px;
+    max-width: 500px;
     padding-top: 70px;
   }
   .about-me__info {

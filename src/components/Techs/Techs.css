@@ -54,9 +54,25 @@
   margin: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .techs {
+    max-width: 1200px;
+    padding: 40px 0;
+  }
+  .techs__container {
+    min-width: 480px;
+  }
+  .techs__title {
+    min-width: 480px;
+  }
+  .techs__list {
+    max-width: 880px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .techs {
-    max-width: 768px;
+    max-width: 900px;
     padding: 90px 0;
   }
   .techs__container {
@@ -82,9 +98,25 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .techs {
+    max-width: 480px;
+    padding: 40px 0;
+  }
+  .techs__container {
+    min-width: 480px;
+  }
+  .techs__title {
+    min-width: 480px;
+  }
+  .techs__list {
+    max-width: 480px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .techs {
-    max-width: 320px;
+    max-width: 500px;
     padding: 70px 0;
     background-color: rgba(0, 0, 0, 0);
   }

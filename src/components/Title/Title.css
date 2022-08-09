@@ -10,9 +10,21 @@
   border-bottom: 1px solid #000000;
 }
 
+@media screen and (max-width: 1200px) {
+  .title {
+    min-width: 880px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .title {
     min-width: 668px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    min-width: 480px;
   }
 }
 

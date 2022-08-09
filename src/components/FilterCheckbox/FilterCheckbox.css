@@ -72,6 +72,15 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .filter-check-box__button-switch {
+    margin: 10px 5px 10px 5px;
+  }
+  .filter-check-box__text {
+    margin: auto 10px auto 0;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .filter-check-box {
     margin: 0 auto;
