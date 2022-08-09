@@ -44,6 +44,15 @@
   font-size: 18px;
   line-height: 1.11;
   color: #A0A0A0;
+  transition: .17s linear;
+}
+.search-form__input-film:focus {
+  width: 30%;
+  outline: 2px solid #3456F3;
+  border-radius: 50px;
+}
+.search-form__input-film::placeholder {
+  color: #A0A0A0;
 }
 .search-form__button-find {
   width: 34px;
