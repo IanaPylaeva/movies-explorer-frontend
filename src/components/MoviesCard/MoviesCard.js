@@ -4,6 +4,11 @@ import { useMatch } from 'react-router-dom';
 
 function MoviesCard(props) {
   const isSavedMoviesRoute = useMatch({ path: '/saved-movies', exact: true });
+  const [isSaved, setIsSaved] = React.useState(false);
+
+  function handleSaveToggle() {
+    setIsSaved(!isSaved);
+  }
 
   function handleClick() {
     props.onCardClick(props.card);
@@ -17,7 +22,8 @@ function MoviesCard(props) {
           <p className="movies-card__time">{props.time}</p>
         </div>
         <button 
-          className={`movies-card__button ${props.isSaved ? 'movies-card__button_type_saved' : ""} ${isSavedMoviesRoute ? 'movies-card__button_type_remove' : ""}`}
+          className={`movies-card__button ${isSaved ? 'movies-card__button_type_saved' : ""} ${isSavedMoviesRoute ? 'movies-card__button_type_remove' : ""}`}
+          onClick={handleSaveToggle}
           type="button">
         </button>
       </div>
