@@ -37,9 +37,12 @@
 }
 
 @media screen and (max-width: 900px) {
+  .welcome {
+    margin-top: 232px;
+  }
   .welcome__title_type_profile {
     min-width: 204px;
-    margin: 166px auto 96px;
+    margin: 4px auto 96px;
   }
   .welcome__logo-link {
     max-width: 38px;
@@ -56,7 +59,7 @@
 @media screen and (max-width: 500px) {
   .welcome {
     max-width: 260px;
-    margin: 70px auto 0;
+    margin: 56px auto 0;
   }
   .welcome__title {
     min-width: 260px;
@@ -65,7 +68,7 @@
   }
   .welcome__title_type_profile {
     min-width: 204px;
-    margin: 0 auto 80px;
+    margin: 14px auto 80px;
   }
   .welcome__logo {
     margin: 0 auto;
