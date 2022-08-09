@@ -62,7 +62,7 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 1.38;
-  text-align: right;  
+  text-align: right;
   color: #000000;
   cursor: pointer;
   transition: opacity .3s ease;
@@ -220,7 +220,7 @@
   }
   .navigation__list-item {
     min-width: 240px;
-    margin: 0 0 14px 0;
+    margin: 0 0 14px;
   }
   .navigation__link {
     max-width: 240px;
@@ -239,12 +239,12 @@
     padding: 0;
     display: flex;
     flex-direction: row;
-  }  
+  }
   .navigation__button-menu {
     display: flex;
     width: 38px;
     height: 43px;
-    padding: 12.5px 9px 10px 9px;
+    padding: 12.5px 9px 10px;
     background-size: contain;
     margin: 15px 0 16px auto;
   }

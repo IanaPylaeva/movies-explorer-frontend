@@ -134,7 +134,7 @@
     max-width: 292px;
     font-size: 11px;
     line-height: 1.45;
-  }  
+  }
   .techs__list {
     max-width: 178px;
     display: grid;
@@ -147,5 +147,5 @@
   .techs__list-item {
     width: 100%;
     margin: 0;
-  }  
+  }
 }

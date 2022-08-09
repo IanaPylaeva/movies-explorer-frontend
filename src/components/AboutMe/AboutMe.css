@@ -32,7 +32,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1.11;
-  mix-blend-mode: normal;  
+  mix-blend-mode: normal;
 }
 .about-me__text {
   min-width: 100%;
@@ -84,7 +84,7 @@
   }
   .about-me__info {
     max-width: 880px;
-  }  
+  }
   .about-me__text {
     margin: 0 0 49px 0;
   }
@@ -102,7 +102,7 @@
   .about-me__info {
     max-width: 668px;
     margin: 66px auto 90px;
-  }  
+  }
   .about-me__text-container {
     max-width: 364px;
     margin: 0 49px 0 0;
@@ -134,7 +134,7 @@
   }
   .about-me__info {
     max-width: 480px;
-  }  
+  }
   .about-me__text {
     margin: 0 0 19px 0;
   }
@@ -153,7 +153,7 @@
     margin: 60px auto 70px;
     display: flex;
     flex-direction: column-reverse;
-  }  
+  }
   .about-me__text-container {
     max-width: 292px;
     margin: 0;

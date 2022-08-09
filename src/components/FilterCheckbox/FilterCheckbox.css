@@ -1,5 +1,5 @@
 .filter-check-box {
-  margin: 16px 0 16px;
+  margin: 16px 0;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 767px) {
   .filter-check-box__button-switch {
-    margin: 10px 5px 10px 5px;
+    margin: 10px 5px;
   }
   .filter-check-box__text {
     margin: auto 10px auto 0;
@@ -93,5 +93,5 @@
     margin: 0;
     font-size: 11px;
     line-height: 1.64;
-  }  
+  }
 }

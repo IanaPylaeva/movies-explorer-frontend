@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 .profile__form {
   max-width: 410px;
@@ -50,11 +50,11 @@
   border: none;
 }
 .profile__input-error {
-  margin: 6px 0 0 0;
+  margin: 6px 0 0;
   padding-bottom: 0;
   font-weight: 400;
   font-size: 10px;
-  line-height: 1.2;  
+  line-height: 1.2;
   color: #EE3465;
 }
 .profile__button-edit {
@@ -69,13 +69,13 @@
   color: #000000;
 }
 .profile__button-sign-out {
-  margin: 0 auto 70px auto;
+  margin: 0 auto 70px;
   min-width: 410px;
   text-decoration: none;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.23;
-  text-align: center;  
+  text-align: center;
   color: #EE3465;
 }
 
@@ -85,7 +85,7 @@
     margin: 0 auto;
     padding: 0;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
   }
   .profile__form {
     margin: 0 auto 210px;
@@ -119,9 +119,9 @@
     line-height: 1.25;
   }
   .profile__button-sign-out {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 40px;
     min-width: 300px;
     font-size: 12px;
     line-height: 1.25;
-  }  
+  }
 }

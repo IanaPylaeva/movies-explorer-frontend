@@ -5,8 +5,7 @@ import logo from '../../images/logo.svg';
 import Navigation from '../Navigation/Navigation';
 import NavTab from '../NavTab/NavTab';
 
-function Header({ loggedIn }) {
-  
+function Header({ loggedIn }) {  
   return (
     <header className="header">
       <div className="header__container">

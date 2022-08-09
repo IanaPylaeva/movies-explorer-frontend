@@ -9,7 +9,6 @@
   border-bottom: 1px solid #E8E8E8;
   margin: 0 auto;
   padding: 0;
-
 }
 .search-form__container {
   max-width: 1140px;
@@ -109,7 +108,7 @@
   }
   .search-form__container {
     max-width: 480px;
-    margin: 80px auto 80px;
+    margin: 80px auto;
   }
   .search-form__film-container {
     max-width: 290px;
@@ -153,5 +152,5 @@
   }
   .search-form__button-find {
     margin: 0 0 0 27px;
-  }  
+  }
 }

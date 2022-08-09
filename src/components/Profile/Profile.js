@@ -4,6 +4,7 @@ import './Profile.css';
 import Welcome from "../Welcome/Welcome";
 
 function Profile() {
+  
   function handleSubmit(evt) {
     evt.preventDefault();// Запрещаем браузеру переходить по адресу формы - не перезагружается
   }

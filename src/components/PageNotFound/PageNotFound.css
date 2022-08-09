@@ -50,7 +50,7 @@
     max-width: 500px;
   }
   .page-not-found__title {
-    margin: 329px auto 10px auto;
+    margin: 329px auto 10px;
     max-width: 300px;
     font-size: 80px;
     line-height: 1.21;
@@ -61,7 +61,7 @@
     line-height: 1.25;
   }
   .page-not-found__link {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
     max-width: 36px;
     font-size: 12px;
     line-height: 1.25;

@@ -42,7 +42,7 @@
 .promo__link {
   text-decoration: none;
   color: #000000;
-  margin: 10px auto 10px;
+  margin: 10px auto;
   cursor: pointer;
   transition: opacity .3s ease;
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Welcome from "../Welcome/Welcome";
 
 function Login() {
+  
   function handleSubmit(evt) {
     evt.preventDefault();// Запрещаем браузеру переходить по адресу формы - не перезагружается
   }
