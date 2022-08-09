@@ -51,6 +51,12 @@
 .auth__input:focus {
   border-bottom: 1px solid #3456F3;;
 }
+.auth__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #000000;
+}
 .auth__input-mistake {
   font-weight: 400;
   font-size: 14px;
