@@ -48,6 +48,10 @@
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  outline: none;
+}
+.profile__input:focus {
+  border-bottom: 1px solid #3456F3;;
 }
 .profile__input-error {
   margin: 6px 0 0;
