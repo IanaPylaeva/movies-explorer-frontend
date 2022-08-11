@@ -1,27 +1,19 @@
 .saved-movies__saved-devider {
-  max-width: 1280px;
-  margin: 0;
+  max-width: 100%;
+  margin: 0 auto;
   padding-top: 140px;
-}
-
-@media screen and (max-width: 1200px) {
-  .saved-movies__saved-devider {
-    max-width: 1200px;
-  }
 }
 
 @media screen and (max-width: 900px) {
   .saved-movies__saved-devider {
-    max-width: 900px;
-    margin: 0;
+    margin: 0 auto;
     padding-top: 140px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .saved-movies__saved-devider {
-    max-width: 500px;
-    margin: 0;
+    margin: 0 auto;
     padding-top: 140px;
   }
 }
