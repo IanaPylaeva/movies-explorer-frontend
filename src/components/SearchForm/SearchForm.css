@@ -103,7 +103,8 @@
 
 @media screen and (max-width: 660px) {
   .search-form__border {
-    max-width: 92.19%;
+    max-width: 88.19%;
+    min-width: 88.19%;
   }
   .search-form__film-container {
     min-width: 48.9%;
@@ -114,7 +115,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .search-form__border {
     max-width: 93.75%;
   }
