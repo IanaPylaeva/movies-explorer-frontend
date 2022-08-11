@@ -79,6 +79,9 @@
   .filter-check-box__text {
     margin: auto 10px auto 0;
   }
+  .filter-check-box {
+    margin: 16px auto;
+  }
 }
 
 @media screen and (max-width: 500px) {
