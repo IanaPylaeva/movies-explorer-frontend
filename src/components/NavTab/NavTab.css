@@ -1,5 +1,5 @@
 .nav-tab {
-  margin: 21px 0 21px 919px;
+  margin: 21px 0 21px auto;
   padding: 0;
   max-width: 183px;
   display: flex;
@@ -23,7 +23,7 @@
 }
 .nav-tab__auth {
   min-width: 76px;
-  margin: 0 0 0 auto;
+  margin: 0;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: #3456F3;
@@ -39,27 +39,9 @@
   opacity: .6;
 }
 
-@media screen and (max-width: 1200px) {
-  .nav-tab {
-    margin: 21px 0 21px 400px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .nav-tab {
-    margin: 21px 0 21px 487px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .nav-tab {
-    margin: 21px 0 21px 240px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .nav-tab {
-    margin: 24px 0 24px 122px;
+    margin: 24px 0 24px auto;
     max-width: 132px;
     font-size: 10px;
     line-height: 1.6;

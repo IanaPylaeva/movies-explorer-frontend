@@ -1,6 +1,6 @@
 .navigation {
   max-width: 1102px;
-  min-width: 1102px;
+  min-width: 86.1%;
   margin: 0 auto;
   padding-left: 44px;
   display: flex;
@@ -91,20 +91,9 @@
   opacity: .6;
 }
 
-@media screen and (max-width: 1200px) {
-  .navigation {
-    max-width: 680px;
-    min-width: 680px;
-  }
-  .navigation__link-button {
-    margin: 21px 0 21px 360px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .navigation {
-    max-width: 670px;
-    min-width: 670px;
+    min-width: 87.2%;
     margin: 0;
     padding-left: 0;
   }
@@ -201,40 +190,9 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .navigation {
-    max-width: 400px;
-    min-width: 400px;
-  }
-  .navigation__container {
-    margin: 0 0 0 auto;
-    min-width: 390px;
-  }
-  .navigation__container_active {
-    width: 390px;
-    height: 824px;
-  }
-  .navigation__list {
-    min-width: 240px;
-    margin: 50px auto 0;
-  }
-  .navigation__list-item {
-    min-width: 240px;
-    margin: 0 0 14px;
-  }
-  .navigation__link {
-    max-width: 240px;
-  }
-  .navigation__link-button {
-    margin: 400px auto auto;
-    padding-bottom: 8px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .navigation {
-    min-width: 254px;
-    max-width: 254px;
+    max-width: 79.4%;
     margin: 0 auto;
     padding: 0;
     display: flex;

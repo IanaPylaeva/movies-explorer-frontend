@@ -1,5 +1,5 @@
 .title {
-  min-width: 1140px;
+  min-width: 89.1%;
   margin: 0 auto;
   text-align: left;
   font-weight: 400;
@@ -9,28 +9,14 @@
   padding-bottom: 23px;
   border-bottom: 1px solid #000000;
 }
-
-@media screen and (max-width: 1200px) {
-  .title {
-    min-width: 880px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .title {
-    min-width: 668px;
+    min-width: 86.98%;
   }
 }
-
-@media screen and (max-width: 767px) {
-  .title {
-    min-width: 480px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .title {
-    min-width: 284px;
+    min-width: 88.75%;
     font-size: 18px;
     line-height: 1.22;
     padding-bottom: 28px;
