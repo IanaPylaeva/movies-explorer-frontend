@@ -101,12 +101,6 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .movies-card__text {
-    min-width: 140px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .movies-card:nth-child(n+6) {
     display: none;
