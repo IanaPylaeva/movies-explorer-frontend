@@ -132,6 +132,9 @@
     min-width: 668px;
     max-width: 668px;
   }
+  .about-project__text-container {
+    margin: 0 auto;
+  }
   .about-project__text-item {
     max-width: 319px;
     margin: 70px 30px 0 0;
