@@ -49,6 +49,7 @@
 .promo__link:hover {
   opacity: .6;
 }
+
 @media screen and (max-width: 900px) {
   .promo {
     max-width: 94.8%;
