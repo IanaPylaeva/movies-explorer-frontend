@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './App.css';
 import { Routes, Route } from "react-router-dom";
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
@@ -11,7 +12,46 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import Preloader from "../Preloader/Preloader";
+import MainApi from '../../utils/MainApi';
+
 function App() {
+  const [ moviesCards, setMoviesCards ] = React.useState([]);
+  const [ savedMovies, setSavedMovies ] = React.useState([]);
+  const [ isCardsLoading, setIsCardsLoading ] = React.useState(false);
+  const [ errorMessageMovies, setErrorMessageMovies ] = React.useState(null);
+  const [ errorMessageSavedMovies, setErrorMessageSavedMovies ] = React.useState(null);
+  const [ authErrorMessage, setAuthErrorMessage ] = React.useState(null);
+  const [ updateMessage, setUpdateMessage ] = React.useState(null);
+  const [ updateErrorMessage, setUpdateErrorMessage ] = React.useState(null);
+  const [ isDisableForm, setIsDisableForm ] = React.useState(false);
+
+  const [ currentUser, setCurrentUser ] = React.useState({});
+  const [ isLoggedIn, setIsLoggedIn ] = React.useState(false);
+
+  /* Получение карточек */
+  useEffect(() => {
+    if (isLoggedIn) {
+      setIsCardsLoading(true);
+      MainApi
+        .getMoviesCards()
+        .then((movies) => {
+          localStorage.setItem('lastSearchMovies', JSON.stringify(movies));
+        })
+        .catch((err) => {
+          setErrorMessageMovies(serverError)
+          console.log(error);
+        })
+        .finally(() => {
+          setIsCardsLoading(false);
+        });
+    }
+   }, [isLoggedIn]);
+
+
+
+
   return (
     <div className="page">
       <Routes>
