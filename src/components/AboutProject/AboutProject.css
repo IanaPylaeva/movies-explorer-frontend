@@ -1,0 +1,189 @@
+.about-project {
+  min-width: 89,1%;
+  margin: 0 auto;
+  padding: 110px 0;
+  display: flex;
+  flex-direction: column;
+}
+.about-project__container {
+  max-width: 89.1%;
+  margin: 0 auto;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+.about-project__text-container {
+  min-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.about-project__text-item {
+  max-width: 48.2%;
+  margin: 70px 40px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.about-project__text-item:last-child {
+  margin-right: 0;
+}
+.about-project__text-title {
+  min-width: 100%;
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+.about-project__text {
+  min-width: 100%;
+  margin: 26px 0 0;
+  font-size: 14px;
+  line-height: 1.43;
+}
+.about-project__weeks-contaner {
+  min-width: 100%;
+  padding: 0;
+  margin: 110px 0 0;
+  font-size: 14px;
+  line-height: 1.21;
+  display: flex;
+  flex-direction: row;
+}
+.about-project__container-back-end {
+  min-width: 20%;
+  margin: 0 0 0 auto;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+.about-project__container-front-end {
+  min-width: 80%;
+  margin: 0 auto 0 0;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+.about-project__week-back-end {
+  width: 100%;
+  margin: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background-color: #3456F3;
+  text-align: center;
+}
+.about-project__week-front-end {
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background-color: #F2F2F2;
+  margin: 0;
+  text-align: center;
+}
+.about-project__architecture-back-end {
+  width: 100%;
+  margin: 14px auto 0;
+  text-align: center;
+  color: #A0A0A0;
+}
+.about-project__architecture-front-end {
+  width: 100%;
+  margin: 14px auto 0;
+  text-align: center;
+  color: #A0A0A0;
+}
+
+@media screen and (max-width: 900px) {
+  .about-project {
+    min-width: 86.9%;
+    padding: 90px 0;
+  }
+  .about-project__container {
+    max-width: 86.9%;
+  }
+  .about-project__text-container {
+    margin: 0 auto;
+  }
+  .about-project__text-item {
+    max-width: 47.75%;
+    margin: 70px 30px 0 0;
+  }
+  .about-project__text-item:last-child {
+    margin: 70px 0 0;
+  }
+  .about-project__text {
+    margin: 22px 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .about-project__weeks-contaner {
+    margin: 93px 0 0;
+    font-size: 14px;
+    line-height: 1.21;
+  }  
+  .about-project__container-back-end {
+    min-width: 20.95%;
+  }
+  .about-project__container-front-end {
+    min-width: 79.05%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-project {
+    max-width: 100%;
+    padding: 70px 0;
+  }
+  .about-project__container {
+    max-width: 88.75%;
+    margin: 60px auto 0;
+  }
+  .about-project__text-container {
+    flex-direction: column;
+  }
+  .about-project__text-item {
+    max-width: 100%;
+    margin: 0 0 56px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-project__text-item:last-child {
+    margin: 0 0 60px;
+  }
+  .about-project__text-title {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+  .about-project__text {
+    margin: 16px 0 0;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  .about-project__weeks-contaner {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.18;
+  }
+  .about-project__container-back-end {
+    min-width: 35.2%;
+  }
+  .about-project__container-front-end {
+    min-width: 64.8%;
+  }
+  .about-project__week-back-end {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .about-project__week-front-end {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .about-project__architecture-back-end {
+    margin: 10px auto 0;
+  }
+  .about-project__architecture-front-end {
+    margin: 10px auto 0;
+  }
+}

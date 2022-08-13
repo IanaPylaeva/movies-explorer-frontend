@@ -1,0 +1,100 @@
+.filter-check-box {
+  margin: 16px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #E8E8E8;
+}
+.filter-check-box__button-switch {
+  margin: 10px 14px 10px 29px;
+  width: 36px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+}
+.filter-check-box__input-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.filter-check-box__slider {
+  position: absolute;
+  border-radius: 20px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #EBEBEB;
+  transition: .4s;
+}
+.filter-check-box__slider:hover {
+  opacity: .6;
+}
+.filter-check-box__slider:before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #F5F5F5;
+  transition: .4s;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+}
+.filter-check-box__input-switch:checked + .filter-check-box__slider:before {
+  background-color: #FFFFFF;
+}
+.filter-check-box__input-switch:checked + .filter-check-box__slider {
+  background-color: #2BE080;
+}
+.filter-check-box__input-switch:checked + .filter-check-box__slider:before {
+  transform: translate(16px);
+}
+.filter-check-box__text {
+  margin: auto 30px auto 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #000000;
+}
+
+@media screen and (max-width: 900px) {
+  .filter-check-box {
+    border-left: 1px solid #CBCBCB;
+  }
+  .filter-check-box__button-switch {
+    margin: 10px 15px 10px 19px;
+  }
+  .filter-check-box__text {
+    margin: auto 20px auto 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter-check-box__button-switch {
+    margin: 10px 5px;
+  }
+  .filter-check-box__text {
+    margin: auto 10px auto 0;
+  }
+  .filter-check-box {
+    margin: 16px auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .filter-check-box {
+    margin: 0 auto;
+    border-left: none;
+  }
+  .filter-check-box__button-switch {
+    margin: 0 13px 0 0;
+  }
+  .filter-check-box__text {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.64;
+  }
+}
