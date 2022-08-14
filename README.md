@@ -3,7 +3,7 @@
 
 [Макет дипломного проекта Фигма](https://www.figma.com/file/HZClXSkSq7xZ9RVgYp5fvc/Diploma-Copy)
 
-Домен для фронтенда: domain.IanaPylaeva.nomoredomains.xyz
+Домен для фронтенда: movie.diplom.ianapylaeva.nomoredomains.xyz
 
 IP: 51.250.90.162
 ____________________________

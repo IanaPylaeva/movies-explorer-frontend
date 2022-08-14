@@ -1,9 +1,9 @@
 import { moviesApiUrl } from "./constants";
 
-class Api {
-  constructor({ address, headers }) {
-    this._address = address;
-    this._headers = headers;
+class MoviesApi {
+  constructor(config) {
+    this._url = config.url;
+    this._headers = config.headers;
   }
 
   /* Ответ от сервера всегда проверяется на корректность */
@@ -15,18 +15,20 @@ class Api {
     return Promise.reject(`Ошибка: ${res.status}`);
   };
 
-  getMoviesCards() {
-    return fetch(`${this._address}/beatfilm-movies`, {
+  getMovies() {
+    return fetch(`${this._url}/beatfilm-movies`, {
       method: 'GET',
       headers: this._headers,
     })
     .then(this._checkCorrectness);
   };
-}
+};
 
-export const moviesApi = new Api({
-  address: moviesApiUrl,
+const moviesApi = new MoviesApi({
+  url: moviesApiUrl,
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
+export default moviesApi;

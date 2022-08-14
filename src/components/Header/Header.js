@@ -5,15 +5,14 @@ import logo from '../../images/logo.svg';
 import Navigation from '../Navigation/Navigation';
 import NavTab from '../NavTab/NavTab';
 
-function Header({ loggedIn }) {  
+function Header({ loggedIn, isLoading }) {  
   return (
     <header className="header">
       <div className="header__container">
         <Link to="/" className="header__logo-link">
           <img src={logo} alt="логотип" className="header__logo" />
         </Link>
-        {!loggedIn && <NavTab />}
-        {loggedIn && <Navigation />}
+        {isLoading ? '' : loggedIn ? <Navigation /> : <NavTab />}
       </div>
     </header>
   );

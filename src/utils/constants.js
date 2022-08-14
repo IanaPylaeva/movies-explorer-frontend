@@ -8,6 +8,16 @@ const biography = 'Я родился и живу в Саратове, закон
 const facebookLink = 'https://www.facebook.com/';
 const githubLink = 'https://github.com/';
 
+const addErrorMovies = 'Во время добавления фильма произошла ошибка.';
+const deleteErrorMovies = 'Во время удаления фильма произошла ошибка.';
+const searchErrorMovies = 'Нужно ввести ключевое слово';
+const messageErrorMovies = 'Во время запроса произошла ошибка.';
+const severError = 'Что-то пошло не так! Ошибка сервера';
+const validationEmailErrorMessage = 'Некорректный адрес почты';
+const registerUserSuccessful = 'Вы успешно зарегистрировались!';
+const registerUserError = 'Что-то пошло не так! Ошибка регистрации';
+const authError = 'Что-то пошло не так! Ошибка авторизации.';
+
 export {
   mainApiUrl,
   moviesApiUrl,
@@ -17,4 +27,13 @@ export {
   biography,
   facebookLink,
   githubLink,
+  addErrorMovies,
+  deleteErrorMovies,
+  searchErrorMovies,
+  messageErrorMovies,
+  severError,
+  validationEmailErrorMessage,
+  registerUserSuccessful,
+  registerUserError,
+  authError
 }
