@@ -12,7 +12,7 @@ const addErrorMovies = 'Во время добавления фильма про
 const deleteErrorMovies = 'Во время удаления фильма произошла ошибка.';
 const searchErrorMovies = 'Нужно ввести ключевое слово';
 const messageErrorMovies = 'Во время запроса произошла ошибка.';
-const severError = 'Что-то пошло не так! Ошибка сервера';
+const serverError = 'Что-то пошло не так! Ошибка сервера';
 const validationEmailErrorMessage = 'Некорректный адрес почты';
 const registerUserSuccessful = 'Вы успешно зарегистрировались!';
 const registerUserError = 'Что-то пошло не так! Ошибка регистрации';
@@ -31,7 +31,7 @@ export {
   deleteErrorMovies,
   searchErrorMovies,
   messageErrorMovies,
-  severError,
+  serverError,
   validationEmailErrorMessage,
   registerUserSuccessful,
   registerUserError,

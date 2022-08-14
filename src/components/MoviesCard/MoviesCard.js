@@ -50,7 +50,7 @@ function MoviesCard({ film, savedMoviesToggle, filmsSaved }) {
         )}
       </div>
       <a className="movies-card__image-link" href={pathname === '/saved-movies' ? `${film.trailerLink}` : `${film.trailerLink}`} target="_blank" rel="noreferrer">
-        <img src={pathname === '/saved-movies' ? `${film.image}` : `moviesApiUrl${film.image.url}`} className="movies-card__image" alt={film.nameRu}></img>
+        <img src={pathname === '/saved-movies' ? `${film.image}` : `https://api.nomoreparties.co${film.image.url}`} className="movies-card__image" alt={film.nameRu}></img>
       </a>
     </section>
   )

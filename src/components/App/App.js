@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import './App.css';
 import { Routes, Route, Navigate, useNavigate, useLocation } from "react-router-dom";
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
-import { severError, registerUserSuccessful, registerUserError, authError } from "../../utils/constants";
+import { serverError, registerUserSuccessful, registerUserError, authError } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
@@ -34,16 +34,16 @@ function App() {
 
   function getUserData() {
     MainApi.getUserData()
-    .then((data) => {
-      setCurrentUser(data);
-      setLoggedIn(true);
-    })
-    .catch((err) => {
-      console.log(severError);
-    })
-    .finally(() => {
-      setIsLoading(false);
-    });
+      .then((data) => {
+        setCurrentUser(data);
+        setLoggedIn(true);
+      })
+      .catch((err) => {
+        console.log(serverError);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }
 
   function onRegister(data) {
