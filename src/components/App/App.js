@@ -34,8 +34,8 @@ function App() {
 
   function getUserInfo() {
     MainApi.getUserInfo()
-      .then((res) => {
-        setCurrentUser(res.data);
+      .then((data) => {
+        setCurrentUser(data);
         setLoggedIn(true);
       })
       .catch((err) => {
