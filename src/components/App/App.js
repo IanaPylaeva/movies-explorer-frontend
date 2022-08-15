@@ -122,8 +122,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={ <Main /> }></Route>
 
-          <Route exact path="/movies" element={
+          <Route element={
             <ProtectedRoute
+              path="/movies"
               loggedIn={loggedIn}         
               component={Movies}
               isLoading={isLoading}
@@ -131,8 +132,9 @@ function App() {
             ></ProtectedRoute>
           }></Route>
           
-          <Route exact path="/saved-movies" element={
+          <Route element={
             <ProtectedRoute
+              path="/saved-movies"
               loggedIn={loggedIn}
               component={SavedMovies}
               isLoading={isLoading}
@@ -140,8 +142,9 @@ function App() {
             ></ProtectedRoute>
           }></Route>
 
-          <Route exact path="/profile" element={
+          <Route element={
             <ProtectedRoute
+              path="/profile"
               loggedIn={loggedIn}
               component={Profile}
               isLoading={isLoading}
