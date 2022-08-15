@@ -121,38 +121,18 @@ function App() {
         
         <Routes>
           <Route exact path="/" element={ <Main /> }></Route>
-
-          <Route element={
-            <ProtectedRoute
-              path="/movies"
-              loggedIn={loggedIn}         
-              component={Movies}
-              isLoading={isLoading}
-              openPopup={openPopup}
-            ></ProtectedRoute>
-          }></Route>
           
-          <Route element={
-            <ProtectedRoute
-              path="/saved-movies"
-              loggedIn={loggedIn}
-              component={SavedMovies}
-              isLoading={isLoading}
-              openPopup={openPopup}
-            ></ProtectedRoute>
-          }></Route>
+          <ProtectedRoute
+            loggedIn={loggedIn}
+            isLoading={isLoading}
+            openPopup={openPopup}
+            onSignOut={onSignOut}
+          >
+            <Route exact path="/movies" element={< Movies />}></Route>          
+            <Route exact path="/saved-movies" element={< SavedMovies />}></Route>
+            <Route exact path="/profile" element={< Profile />}></Route>
+          </ProtectedRoute>
 
-          <Route element={
-            <ProtectedRoute
-              path="/profile"
-              loggedIn={loggedIn}
-              component={Profile}
-              isLoading={isLoading}
-              onSignOut={onSignOut}
-              openPopup={openPopup}
-            ></ProtectedRoute>
-          }></Route>
-          
           <Route path="/signin" element={
             isLoading ? <Preloader /> : !loggedIn ? <Login onLogin={onLogin} /> : <Navigate replace to="/movies" />
           }
