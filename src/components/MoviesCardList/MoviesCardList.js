@@ -12,7 +12,7 @@ function MoviesCardList({ films, savedMoviesToggle, filmsSaved, filmsRemains, ha
         <div className="movies-card-list__container">
           {films.map((film) => (
               <MoviesCard
-                key={film._id || film.movieId}
+                key={film.id || film.movieId}
                 film={film}
                 savedMoviesToggle={savedMoviesToggle}
                 filmsSaved={filmsSaved}

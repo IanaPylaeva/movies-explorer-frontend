@@ -3,18 +3,18 @@ import './MoviesCard.css';
 import { useLocation } from 'react-router-dom';
 
 function MoviesCard({ film, savedMoviesToggle, filmsSaved }) {
-  const [isSaved, setIsSaved] = React.useState(false);
+  const [favorite, setFavorite] = React.useState(false);
   const { pathname } = useLocation();
   
-  function handleSavedToggle() {
-  const newSaved = !isSaved;
+  function handleFavoriteToggle() {
+  const newFavorite = !favorite;
   const savedFilm = filmsSaved.filter((obj) => {
     return obj.movieId == film.id;
   });
-    savedMoviesToggle({ ...film, _id: savedFilm.length > 0 ? savedFilm[0]._id : null }, newSaved);
+    savedMoviesToggle({ ...film, _id: savedFilm.length > 0 ? savedFilm[0]._id : null }, newFavorite);
   }
   
-  function handleSavedDelete() {
+  function handleFavoriteDelete() {
     savedMoviesToggle(film, false);
   }
   
@@ -29,9 +29,9 @@ function MoviesCard({ film, savedMoviesToggle, filmsSaved }) {
       });
       
       if (savedFilm.length > 0) {
-        setIsSaved(true);
+        setFavorite(true);
       } else {
-        setIsSaved(false);
+        setFavorite(false);
       }
     }
   }, [pathname, filmsSaved, film.id]);
@@ -44,9 +44,9 @@ function MoviesCard({ film, savedMoviesToggle, filmsSaved }) {
           <p className="movies-card__time">{getMovieDuration(film.duration)}</p>
         </div>
         {pathname === '/saved-movies' ? (
-          <button type="button" className="movies-card__button movies-card__button_type_remove" onClick={handleSavedDelete} />
+          <button type="button" className="movies-card__button movies-card__button_type_remove" onClick={handleFavoriteDelete} />
         ) : (
-          <button type="button" className={`movies-card__button ${isSaved ? 'movies-card__button_type_saved' : ""}`} onClick={handleSavedToggle} />
+          <button type="button" className={`movies-card__button ${favorite ? 'movies-card__button_type_saved' : ""}`} onClick={handleFavoriteToggle} />
         )}
       </div>
       <a className="movies-card__image-link" href={pathname === '/saved-movies' ? `${film.trailerLink}` : `${film.trailerLink}`} target="_blank" rel="noreferrer">

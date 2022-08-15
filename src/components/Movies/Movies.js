@@ -5,7 +5,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Preloader from '../Preloader/Preloader';
 import moviesApi from '../../utils/MoviesApi';
 import mainApi from '../../utils/MainApi';
-import { moviesApiUrl } from '../../utils/constants'
+import { moviesApiUrl } from '../../utils/constants';
 import { addErrorMovies, deleteErrorMovies, searchErrorMovies, messageErrorMovies } from '../../utils/constants';
 
 function Movies({ openPopup }) {

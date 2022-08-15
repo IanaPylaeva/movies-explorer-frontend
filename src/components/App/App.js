@@ -15,7 +15,7 @@ import PageNotFound from "../PageNotFound/PageNotFound";
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Preloader from "../Preloader/Preloader";
-import MainApi from '../../utils/MainApi';
+import mainApi from '../../utils/MainApi';
 import Token from '../../utils/token';
 import Popup from "../Popup/Popup";
 
@@ -29,11 +29,11 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getUserData();
+    getUserInfo();
   }, []);
 
-  function getUserData() {
-    MainApi.getUserData()
+  function getUserInfo() {
+    mainApi.getUserInfo()
       .then((data) => {
         setCurrentUser(data);
         setLoggedIn(true);
@@ -47,7 +47,7 @@ function App() {
   }
 
   function onRegister(data) {
-    MainApi.register(data)
+    mainApi.register(data)
     .then((res) => {
       if (res._id) {
         setPopupTitle(registerUserSuccessful);
@@ -62,13 +62,13 @@ function App() {
   }
 
   function onLogin(data) {
-    MainApi.authorize(data)
+    mainApi.authorize(data)
     .then(({ token }) => {
       if (token) {
         Token.saveToken(token);
-        MainApi.updateToken();
+        mainApi.updateToken();
         setLoggedIn(true);
-        getUserData();
+        getUserInfo();
         navigate('/movies');
       }
     })
