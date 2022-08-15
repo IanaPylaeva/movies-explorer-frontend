@@ -40,8 +40,6 @@ function App() {
       })
       .catch((err) => {
         console.log(serverError);
-      })
-      .finally(() => {
         setIsLoading(false);
       });
   }
