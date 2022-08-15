@@ -45,7 +45,7 @@ class MainApi {
   getUserInfo() {
     return fetch(`${this._url}/users/me`, {
       method: 'GET',
-      headers: this._headers,
+      headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},
     })
     .then(this._handleResponse);
   };
@@ -53,7 +53,7 @@ class MainApi {
   updateUserInfo(data) {
     return fetch(`${this._url}/users/me`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},
       body: JSON.stringify({
         name: data.name,
         email: data.email,
@@ -65,7 +65,7 @@ class MainApi {
   getMovies() {
     return fetch(`${this._url}/movies`, {
       method: 'GET',
-      headers: this._headers,
+      headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},
     })
     .then(this._handleResponse);
   };
@@ -73,7 +73,7 @@ class MainApi {
   addMovies(data) {
     return fetch(`${this._url}/movies`, {
       method: 'POST',
-      headers: this._headers,
+      headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},
       body: JSON.stringify(data),
     })
     .then(this._handleResponse);
@@ -82,20 +82,20 @@ class MainApi {
   deleteMovies(movieId) {
     return fetch(`${this._url}/movies/${movieId}`, {
       method: 'DELETE',
-      headers: this._headers,
+      headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},
     })
     .then(this._handleResponse);
   };
 
   updateToken() {
-    this._headers.Authorization = `Bearer ${localStorage.getItem('jwt')}`;
+    this._headers.authorization = `Bearer ${localStorage.getItem('jwt')}`;
   }
 };
 
 const mainApi = new MainApi({
-  url: mainApiUrl,
+  url: mainApiUrl || 'http://localhost:3000',
   headers: {
-    'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
+    'Accept': 'application/json',
     'Content-Type': 'application/json',
   }
 });
