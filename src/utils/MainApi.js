@@ -9,7 +9,7 @@ class MainApi {
   _handleResponse = (res) => 
   res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`); // если ошибка, отклоняем промис
 
-  register({ name, email, password }) {
+  registerUser({ name, email, password }) {
     return fetch(`${this._url}/signup`, {
       method: 'POST',
       headers: {

@@ -15,7 +15,7 @@ import PageNotFound from "../PageNotFound/PageNotFound";
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Preloader from "../Preloader/Preloader";
-import mainApi from '../../utils/MainApi';
+import MainApi from '../../utils/MainApi';
 import Token from '../../utils/token';
 import Popup from "../Popup/Popup";
 
@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   function getUserInfo() {
-    mainApi.getUserInfo()
+    MainApi.getUserInfo()
       .then((data) => {
         setCurrentUser(data);
         setLoggedIn(true);
@@ -46,13 +46,13 @@ function App() {
       });
   }
 
-  function onRegister(data) {
-    mainApi.register(data)
+  function onRegister(formData) {
+    MainApi.registerUser(formData)
     .then((res) => {
       if (res._id) {
         setPopupTitle(registerUserSuccessful);
         setIsOpenPopup(true);
-        onLogin(data);
+        onLogin(formData);
       }
     })
     .catch((err) => {
@@ -61,12 +61,12 @@ function App() {
     });
   }
 
-  function onLogin(data) {
-    mainApi.authorize(data)
+  function onLogin(formData) {
+    MainApi.authorize(formData)
     .then(({ token }) => {
       if (token) {
         Token.saveToken(token);
-        mainApi.updateToken();
+        MainApi.updateToken();
         setLoggedIn(true);
         getUserInfo();
         navigate('/movies');
@@ -151,15 +151,13 @@ function App() {
           }></Route>
           
           <Route path="/signin" element={
-            () => 
-              isLoading ? <Preloader /> : !loggedIn ? <Login onLogin={onLogin} /> : <Navigate to="/movies" />
-            }
+            isLoading ? <Preloader /> : !loggedIn ? <Login onLogin={onLogin} /> : <Navigate to="/movies" />
+          }
           />
 
           <Route path="/signup" element={
-            () => 
-              isLoading ? <Preloader /> : !loggedIn ? <Register onRegister={onRegister} /> : <Navigate to="/movies" />
-            }
+            isLoading ? <Preloader /> : !loggedIn ? <Register onRegister={onRegister} /> : <Navigate to="/movies" />
+          }
           />
 
           <Route path="*" element={ <PageNotFound /> } />
