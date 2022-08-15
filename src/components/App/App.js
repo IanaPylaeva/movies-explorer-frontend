@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { Routes, Route, Navigate, useNavigate, useLocation } from "react-router-dom";
+import { Routes, Route, Redirect, useNavigate, useLocation } from "react-router-dom";
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { serverError, registerUserSuccessful, registerUserError, authError } from "../../utils/constants";
 import Header from "../Header/Header";
@@ -151,12 +151,12 @@ function App() {
           }></Route>
           
           <Route path="/signin" element={
-            () => {isLoading ? <Preloader /> : !loggedIn ? <Login onLogin={onLogin} /> : <Navigate replace to="/movies" />}
+            isLoading ? <Preloader /> : !loggedIn ? <Login onLogin={onLogin} /> : <Redirect to="/movies" />
           }
           />
 
           <Route path="/signup" element={
-            () => {isLoading ? <Preloader /> : !loggedIn ? <Register onRegister={onRegister} /> : <Navigate replace to="/movies" />}
+            isLoading ? <Preloader /> : !loggedIn ? <Register onRegister={onRegister} /> : <Redirect to="/movies" />
           }
           />
 
