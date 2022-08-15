@@ -151,12 +151,12 @@ function App() {
           }></Route>
           
           <Route path="/signin" element={
-            isLoading ? <Preloader /> : !loggedIn ? <Login onLogin={onLogin} /> : <Navigate replace to="/movies" />
+            () => {isLoading ? <Preloader /> : !loggedIn ? <Login onLogin={onLogin} /> : <Navigate replace to="/movies" />}
           }
           />
 
           <Route path="/signup" element={
-            isLoading ? <Preloader /> : !loggedIn ? <Register onRegister={onRegister} /> : <Navigate replace to="/movies" />
+            () => {isLoading ? <Preloader /> : !loggedIn ? <Register onRegister={onRegister} /> : <Navigate replace to="/movies" />}
           }
           />
 
