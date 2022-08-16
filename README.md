@@ -11,6 +11,6 @@
 
 IP: mpiy@51.250.90.162
 
-Ссылка на пулреквест: https://github.com/IanaPylaeva/movies-explorer-frontend/pull/2
+[Ссылка на пулреквест level-3 => main](https://github.com/IanaPylaeva/movies-explorer-frontend/pull/2)
 ____________________________
 Выполнила Пылаева Я.М., 2022г
