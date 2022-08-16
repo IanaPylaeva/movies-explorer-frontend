@@ -46,12 +46,10 @@ function App() {
 
   function onRegister(formData) {
     MainApi.registerUser(formData)
-    .then((res) => {
-      if (res._id) {
-        setPopupTitle(registerUserSuccessful);
-        setIsOpenPopup(true);
-        onLogin(formData);
-      }
+    .then(() => {
+      setPopupTitle(registerUserSuccessful);
+      setIsOpenPopup(true);
+      onLogin(formData);
     })
     .catch((err) => {
       setPopupTitle(registerUserError);
