@@ -40,7 +40,7 @@ function MoviesCard({ film, savedMoviesToggle, filmsSaved }) {
     <section className="movies-card">
       <div className="movies-card__container">
         <div className="movies-card__text-container">
-          <p className="movies-card__text">{film.nameRu}</p>
+          <p className="movies-card__text">{film.nameRU}</p>
           <p className="movies-card__time">{getMovieDuration(film.duration)}</p>
         </div>
         {pathname === '/saved-movies' ? (
@@ -50,7 +50,7 @@ function MoviesCard({ film, savedMoviesToggle, filmsSaved }) {
         )}
       </div>
       <a className="movies-card__image-link" href={pathname === '/saved-movies' ? `${film.trailerLink}` : `${film.trailerLink}`} target="_blank" rel="noreferrer">
-        <img src={pathname === '/saved-movies' ? `${film.image}` : `https://api.nomoreparties.co${film.image.url}`} className="movies-card__image" alt={film.nameRu}></img>
+        <img src={pathname === '/saved-movies' ? `${film.image}` : `https://api.nomoreparties.co${film.image.url}`} className="movies-card__image" alt={film.nameRU}></img>
       </a>
     </section>
   )

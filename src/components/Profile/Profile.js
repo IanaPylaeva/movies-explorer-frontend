@@ -52,7 +52,7 @@ function Profile({ onSignOut, openPopup }) {
   return (
     <section className="profile">
       <form className="profile__form" onSubmit={handleSubmit} name="profile-form">        
-        <Welcome title="Привет, {name}!" />
+        <Welcome title="Привет, " name={name}/>
         <div className="profile__inputs">
           <div className="profile__input-container">          
             <p className="profile__text">Имя</p>
@@ -66,7 +66,8 @@ function Profile({ onSignOut, openPopup }) {
           </div>
         </div>
       </form>
-      <Link to="/profile" className="profile__button-edit" type="submit" disabled={!isVisibleButton}>Редактировать</Link>
+      <button className={`profile__button-edit ${!isVisibleButton ? 'profile__button-edit_inactive' : ''}`}
+       type="submit" disabled={!isVisibleButton}>Редактировать</button>
       <Link to="/" className="profile__button-sign-out" type="button" onClick={onSignOut}>Выйти из аккаунта</Link>
     </section>
   )

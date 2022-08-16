@@ -35,7 +35,7 @@ function Login({ onLogin }) {
 
   return (
     <section className="auth">
-      <Welcome title="Рады видеть!" />
+      <Welcome title="Рады видеть" />
       <form className="auth__form auth__form_type_login" onSubmit={handleSubmit} name="auth-form">
         <div className="auth__inputs">
           <div className="auth__input-container">          

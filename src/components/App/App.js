@@ -60,13 +60,11 @@ function App() {
   function onLogin(formData) {
     MainApi.authorize(formData)
     .then(({ token }) => {
-      if (token) {
         Token.saveToken(token);
         MainApi.updateToken();
         setLoggedIn(true);
         getUserInfo();
         navigate('/movies');
-      }
     })
     .catch((err) => {
       setPopupTitle(authError);
@@ -91,7 +89,6 @@ function App() {
           closePopup();
         }
       }
-
       document.addEventListener('keydown', handleEsc);
       return () => {
         document.removeEventListener('keydown', handleEsc);
@@ -113,34 +110,35 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
-        {pathname === '/' || pathname === '/movies' || pathname === '/saved-movies' || pathname === '/profile' ? <Header loggedIn={loggedIn} isLoading={isLoading} /> : ''}
+        {pathname === '/' || pathname === '/movies' || pathname === '/saved-movies' || pathname === '/profile' ?
+        <Header loggedIn={loggedIn} isLoading={isLoading} /> : ''}
         
         <Routes>
           <Route exact path="/" element={ <Main /> }></Route>
 
           <Route exact path="/movies" element={
             <ProtectedRoute
-              loggedIn={loggedIn}         
+              isLoading={isLoading}  
+              loggedIn={loggedIn}       
               component={Movies}
-              isLoading={isLoading}
               openPopup={openPopup}
             ></ProtectedRoute>
           }></Route>
           
           <Route exact path="/saved-movies" element={
             <ProtectedRoute
+              isLoading={isLoading}
               loggedIn={loggedIn}
               component={SavedMovies}
-              isLoading={isLoading}
               openPopup={openPopup}
             ></ProtectedRoute>
           }></Route>
 
           <Route exact path="/profile" element={
             <ProtectedRoute
+              isLoading={isLoading}
               loggedIn={loggedIn}
               component={Profile}
-              isLoading={isLoading}
               onSignOut={onSignOut}
               openPopup={openPopup}
             ></ProtectedRoute>

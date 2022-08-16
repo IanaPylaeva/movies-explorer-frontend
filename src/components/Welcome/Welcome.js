@@ -12,7 +12,7 @@ function Welcome(props) {
       <Link to="/" className={`welcome__logo-link ${isProfileRoute ? 'welcome__logo-link_inactive' : ""}`}>
         <img src={logo} alt="логотип" className="welcome__logo" />
       </Link>
-      <h2 className={`welcome__title ${isProfileRoute ? 'welcome__title_type_profile' : ""}`}>{props.title}</h2>
+      <h2 className={`welcome__title ${isProfileRoute ? 'welcome__title_type_profile' : ""}`}>{props.title}{props.name}!</h2>
     </div>    
   );
 }

@@ -93,7 +93,7 @@ class MainApi {
 };
 
 const mainApi = new MainApi({
-  url: mainApiUrl || 'http://localhost:3000',
+  url: mainApiUrl,
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json',

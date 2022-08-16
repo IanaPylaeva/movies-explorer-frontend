@@ -35,8 +35,8 @@ function Movies({ openPopup }) {
     const clientWidth = document.documentElement.clientWidth;
     const MoviesCountConfig = {
       '1200': [12, 3],
-      '768': [8, 2],
-      '480': [5, 2],
+      '481': [8, 2],
+      '240': [5, 2],
     };
 
     Object.keys(MoviesCountConfig)
@@ -80,7 +80,6 @@ function Movies({ openPopup }) {
       setFilmsWithTumbler(filterData);
     } catch (err) {
       setErrorText(messageErrorMovies);
-
       setFilms([]);
       localStorage.removeItem('films');
       localStorage.removeItem('filmsTumbler');
@@ -106,7 +105,6 @@ function Movies({ openPopup }) {
     setFilmsShowed(filterDataShowed);
     setFilms(filterData);
   }
-
   async function savedMoviesToggle(film, favorite) {
     if (favorite) {
       const objFilm = {

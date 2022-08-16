@@ -4,10 +4,17 @@ import loupe from '../../images/loupe.svg';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm({ handleGetMovies, filmsTumbler, filmsInputSearch, handleGetMoviesTumbler }) {
-  const [ inputSearch, setInputSearch] = React.useState('');
-
+  const [inputSearch, setInputSearch] = React.useState('');
+  const [tumbler, setTumbler] = React.useState(false);
+  
   function handleInputChange(evt) {
     setInputSearch(evt.target.value);
+  }
+
+  function handleTumblerChange(evt) {
+    const newTumbler = !tumbler;
+    setTumbler(newTumbler);
+    handleGetMoviesTumbler(newTumbler);
   }
 
   function handleSubmit(evt) {
@@ -16,22 +23,23 @@ function SearchForm({ handleGetMovies, filmsTumbler, filmsInputSearch, handleGet
   }
 
   useEffect(() => {
+    setTumbler(filmsTumbler);
     setInputSearch(filmsInputSearch);
-  }, [filmsInputSearch]);
+  }, [filmsTumbler, filmsInputSearch]);
 
   return (
-    <section className="search-form">
+    <form className="search-form">
       <div className="search-form__border">
-        <form className="search-form__container">
+        <div className="search-form__container">
           <div className="search-form__film-container">
             <img src={loupe} className="search-form__loupe" alt="значок лупа" />
             <input className="search-form__input-film" placeholder="Фильм" type="text" value={inputSearch || ''} onChange={handleInputChange} required />
             <button className="search-form__button-find" type="submit" onClick={handleSubmit}></button>
           </div>
-          <FilterCheckbox filmsTumbler={filmsTumbler} handleGetMoviesTumbler={handleGetMoviesTumbler} />
-        </form>
+          <FilterCheckbox handleTumblerChange={handleTumblerChange} tumbler={tumbler}/>
+        </div>
       </div>
-    </section>
+    </form>
   )
 }
 

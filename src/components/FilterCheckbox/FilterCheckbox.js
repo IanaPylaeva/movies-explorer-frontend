@@ -1,26 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './FilterCheckbox.css';
 
-function FilterCheckbox({ filmsTumbler, handleGetMoviesTumbler }) {
-  const [tumbler, setTumbler] = React.useState(true);
-
-  function handleTumblerChange(evt) {
-    setTumbler(!tumbler);
-    handleGetMoviesTumbler(!tumbler);
-  }
-
-  useEffect(() => {
-    setTumbler(filmsTumbler);
-  }, [filmsTumbler]);
-
+function FilterCheckbox(props) {  
   return (    
-    <section className="filter-check-box">
-      <div className="filter-check-box__button-switch">
-        <input className="filter-check-box__input-switch" type="checkbox" value={tumbler} checked={tumbler} onChange={handleTumblerChange} />
+    <div className="filter-check-box">
+      <label className="filter-check-box__button-switch">
+        <input className="filter-check-box__input-switch" type="checkbox" value={props.tumbler} checked={props.tumbler} onChange={props.handleTumblerChange} />
         <span className="filter-check-box__slider" />
-      </div>
+      </label>
       <p className="filter-check-box__text">Короткометражки</p>
-    </section>
+    </div>
   )
 }
 
