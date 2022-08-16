@@ -81,17 +81,17 @@ function Register({ onRegister }) {
               required />
             <span className={`auth__input-error ${errors.password ? 'auth__input-error_active' : ''}`}>{errors.password}</span>
           </div>
+        </div>      
+        <button
+          className={`auth__button ${isValid ? "" : 'auth__button_disabled'}`}
+          type="submit"
+          disabled={!isValid ? true : ''}
+          >Зарегистрироваться</button>
+        <div className="auth__reg-container">
+          <p className="auth__reg-question">Уже зарегистрированы?</p>
+          <Link to="/signin" className="auth__reg-link">Войти</Link>
         </div>
       </form>
-      <button
-        className={`auth__button ${isValid ? "" : 'auth__button_disabled'}`}
-        type="submit"
-        disabled={!isValid ? true : ''}
-        >Зарегистрироваться</button>
-      <div className="auth__reg-container">
-        <p className="auth__reg-question">Уже зарегистрированы?</p>
-        <Link to="/signin" className="auth__reg-link">Войти</Link>
-      </div>
     </section>
   )
 }

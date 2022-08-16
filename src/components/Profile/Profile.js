@@ -52,7 +52,7 @@ function Profile({ onSignOut, openPopup }) {
   return (
     <section className="profile">
       <form className="profile__form" onSubmit={handleSubmit} name="profile-form">        
-      <Welcome title="Привет, {name}!" />
+        <Welcome title="Привет, {name}!" />
         <div className="profile__inputs">
           <div className="profile__input-container">          
             <p className="profile__text">Имя</p>

@@ -22,14 +22,14 @@ function SearchForm({ handleGetMovies, filmsTumbler, filmsInputSearch, handleGet
   return (
     <section className="search-form">
       <div className="search-form__border">
-        <div className="search-form__container">
-          <form className="search-form__film-container">
+        <form className="search-form__container">
+          <div className="search-form__film-container">
             <img src={loupe} className="search-form__loupe" alt="значок лупа" />
             <input className="search-form__input-film" placeholder="Фильм" type="text" value={inputSearch || ''} onChange={handleInputChange} required />
             <button className="search-form__button-find" type="submit" onClick={handleSubmit}></button>
-          </form>
+          </div>
           <FilterCheckbox filmsTumbler={filmsTumbler} handleGetMoviesTumbler={handleGetMoviesTumbler} />
-        </div>
+        </form>
       </div>
     </section>
   )
