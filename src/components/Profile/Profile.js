@@ -16,15 +16,16 @@ function Profile({ onSignOut, openPopup }) {
   function handleSubmit(evt) {
     evt.preventDefault();// Запрещаем браузеру переходить по адресу формы - не перезагружается
 
-    mainApi.updateUserInfo({ name, email }).then(() => {
-      setVisibleButton(false);
-      setLastName(name);
-      setLastEmail(email);
-      openPopup('Данные успешно изменены!');
-    })
-    .catch((err) => {
-      openPopup(`Что-то пошло не так! ${err}`);
-    });
+    mainApi.updateUserInfo({ name, email })
+      .then(() => {
+        setVisibleButton(false);
+        setLastName(name);
+        setLastEmail(email);
+        openPopup('Данные успешно изменены!');
+      })
+      .catch((err) => {
+        openPopup(`Что-то пошло не так! ${err}`);
+      });
   };
 
   function handleNameChange(evt) {
@@ -65,10 +66,10 @@ function Profile({ onSignOut, openPopup }) {
             <span className="profile__input-error"></span>
           </div>
         </div>
+        <button className={`profile__button-edit ${!isVisibleButton ? 'profile__button-edit_inactive' : ''}`}
+        type="submit" disabled={!isVisibleButton}>Редактировать</button>
+        <Link to="/" className="profile__button-sign-out" type="button" onClick={onSignOut}>Выйти из аккаунта</Link>
       </form>
-      <button className={`profile__button-edit ${!isVisibleButton ? 'profile__button-edit_inactive' : ''}`}
-       type="submit" disabled={!isVisibleButton}>Редактировать</button>
-      <Link to="/" className="profile__button-sign-out" type="button" onClick={onSignOut}>Выйти из аккаунта</Link>
     </section>
   )
 }

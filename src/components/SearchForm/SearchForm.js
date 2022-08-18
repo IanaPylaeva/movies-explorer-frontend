@@ -28,15 +28,15 @@ function SearchForm({ handleGetMovies, filmsTumbler, filmsInputSearch, handleGet
   }, [filmsTumbler, filmsInputSearch]);
 
   return (
-    <form className="search-form">
+    <form className="search-form" onSubmit={handleSubmit}>
       <div className="search-form__border">
         <div className="search-form__container">
-          <div className="search-form__film-container">
+          <form className="search-form__film-container">
             <img src={loupe} className="search-form__loupe" alt="значок лупа" />
             <input className="search-form__input-film" placeholder="Фильм" type="text" value={inputSearch || ''} onChange={handleInputChange} required />
             <button className="search-form__button-find" type="submit" onClick={handleSubmit}></button>
-          </div>
-          <FilterCheckbox handleTumblerChange={handleTumblerChange} tumbler={tumbler}/>
+          </form>
+          <FilterCheckbox handleTumblerChange={handleTumblerChange} tumbler={tumbler} />
         </div>
       </div>
     </form>
