@@ -85,7 +85,7 @@ function Register({ onRegister }) {
         <button
           className={`auth__button ${isValid ? "" : 'auth__button_disabled'}`}
           type="submit"
-          disabled={!isValid ? true : ''}
+          disabled={!isValid ? true : false}
           >Зарегистрироваться</button>
         <div className="auth__reg-container">
           <p className="auth__reg-question">Уже зарегистрированы?</p>

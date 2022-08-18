@@ -57,8 +57,10 @@ function Movies({ openPopup }) {
   }
 
   async function handleGetMovies(inputSearch) {
+    /*
     setFilmsTumbler(false);
     localStorage.setItem('filmsTumbler', false);
+    */
 
     if (!inputSearch) {
       setErrorText(searchErrorMovies);
@@ -102,9 +104,14 @@ function Movies({ openPopup }) {
       filterDataShowed = filmsShowedWithTumbler;
       filterData = filmsWithTumbler;
     }
+    /*
+    localStorage.setItem('films', JSON.stringify(filterDataShowed.concat(filterData)));
+    localStorage.setItem('filmsTumbler', tumbler);
+    */
     setFilmsShowed(filterDataShowed);
     setFilms(filterData);
   }
+
   async function savedMoviesToggle(film, favorite) {
     if (favorite) {
       const objFilm = {

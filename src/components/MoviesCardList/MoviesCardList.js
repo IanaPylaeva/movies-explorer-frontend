@@ -22,8 +22,9 @@ function MoviesCardList({ films, savedMoviesToggle, filmsSaved, filmsRemains, ha
       ) : (
         <div className="movies-card-list__text">Ничего не найдено</div>
       )}
+
       {filmsRemains.length > 0 && pathname !== '/saved-movies' && (
-        <div className="movies-card-list__container-more movies-card-list__container-more_active">
+        <div className="movies-card-list__container-more">
           <button className="movies-card-list__button-more" type="button" name="more" onClick={handleMore}>Ещё</button>
         </div>
       )}     

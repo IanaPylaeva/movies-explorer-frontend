@@ -24,7 +24,7 @@ function App() {
   const [popupTitle, setPopupTitle] = React.useState('');
   const [currentUser, setCurrentUser] = React.useState({});
   const [loggedIn, setLoggedIn] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const [isLoading, setIsLoading] = React.useState(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
