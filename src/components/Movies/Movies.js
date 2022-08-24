@@ -15,20 +15,7 @@ function Movies({ openPopup }) {
   const [errorText, setErrorText] = React.useState('');
   const [filmsTumbler, setFilmsTumbler] = React.useState(false);
   const [filmsInputSearch, setFilmsInputSearch] = React.useState('');
-  const [MoviesCount, setMoviesCount] = React.useState([]);
   const [filmsShowed, setFilmsShowed] = React.useState(null);
-  const [filmsWithTumbler, setFilmsWithTumbler] = React.useState([]);
-  const [filmsShowedWithTumbler, setFilmsShowedWithTumbler] = React.useState([]);
-
-  useEffect(() => {
-    setMoviesCount(getMoviesCount());
-    const handlerResize = () => setMoviesCount(getMoviesCount());
-    window.addEventListener('resize', handlerResize);
-
-    return () => {
-      window.removeEventListener('resize', handlerResize);
-    };
-  }, []);
 
   function getMoviesCount() {
     let countCards;
@@ -51,36 +38,37 @@ function Movies({ openPopup }) {
 
   function handleMore() {
     const spliceFilms = films;
-    const newFilmsShowed = filmsShowed.concat(spliceFilms.splice(0, MoviesCount[1]));
+    const moviesCount = getMoviesCount();
+    const newFilmsShowed = filmsShowed.concat(
+      spliceFilms.splice(0, moviesCount[1])
+    );
     setFilmsShowed(newFilmsShowed);
     setFilms(spliceFilms);
   }
 
-  async function handleGetMovies(inputSearch) {
-    /*
-    setFilmsTumbler(false);
-    localStorage.setItem('filmsTumbler', false);
-    */
-
-    if (!inputSearch) {
-      setErrorText(searchErrorMovies);
-      return false;
+  async function handleGetMovies(params) {
+    if (!params.inputSearch) {
+     setErrorText(searchErrorMovies);
+     return false;
     }
     setErrorText('');
     setPreloader(true);
-
+    
     try {
       const data = await moviesApi.getMovies();
-      let filterData = data.filter(({ nameRU }) => nameRU.toLowerCase().includes(inputSearch.toLowerCase()));
-      localStorage.setItem('films', JSON.stringify(filterData));
-      localStorage.setItem('filmsInputSearch', inputSearch);
-
-      const spliceData = filterData.splice(0, MoviesCount[0]);
+      const filmsSaved = await mainApi.getMovies();
+      setFilmsSaved(filmsSaved);
+      let filterData = data.filter(({ nameRU }) => nameRU.toLowerCase().includes(params.inputSearch.toLowerCase()));
+      if (params.tumbler) {
+        filterData = filterData.filter(({ duration }) => duration <= 40);
+      }
+      filterData = [...filterData];
+      const moviesCount = getMoviesCount();
+      const spliceData = filterData.splice(0, moviesCount[0]);
       setFilmsShowed(spliceData);
       setFilms(filterData);
-      setFilmsShowedWithTumbler(spliceData);
-      setFilmsWithTumbler(filterData);
     } catch (err) {
+      openPopup(`Ошибка сервера ${err}`);
       setErrorText(messageErrorMovies);
       setFilms([]);
       localStorage.removeItem('films');
@@ -89,27 +77,6 @@ function Movies({ openPopup }) {
     } finally {
       setPreloader(false);
     }
-  }
-
-  async function handleGetMoviesTumbler(tumbler) {
-    let filterDataShowed = [];
-    let filterData = [];
-
-    if (tumbler) {
-      setFilmsShowedWithTumbler(filmsShowed);
-      setFilmsWithTumbler(films);
-      filterDataShowed = filmsShowed.filter(({ duration }) => duration <= 40);
-      filterData = films.filter(({ duration }) => duration <= 40);
-    } else {
-      filterDataShowed = filmsShowedWithTumbler;
-      filterData = filmsWithTumbler;
-    }
-    /*
-    localStorage.setItem('films', JSON.stringify(filterDataShowed.concat(filterData)));
-    localStorage.setItem('filmsTumbler', tumbler);
-    */
-    setFilmsShowed(filterDataShowed);
-    setFilms(filterData);
   }
 
   async function savedMoviesToggle(film, favorite) {
@@ -145,42 +112,45 @@ function Movies({ openPopup }) {
     }
   }
 
+  /* Забираем из localStorage последнее состояние фильтров */
   useEffect(() => {
-    mainApi
-      .getMovies()
-      .then((data) => {
-        setFilmsSaved(data);
-      })
-      .catch((err) => {
-        openPopup(`Ошибка сервера ${err}`);
-      });
-
-      const localStorageFilms = localStorage.getItem('films');
-
-      if (localStorageFilms) {
-        const filterData = JSON.parse(localStorageFilms);
-        setFilmsShowed(filterData.splice(0, getMoviesCount()[0]));
-        setFilms(filterData);
-        setPreloader(false);
-      }
-      const localStorageFilmsTumbler = localStorage.getItem('filmsTumbler');
-      const localStorageFilmsInputSearch = localStorage.getItem('filmsInputSearch');
-
-      if (localStorageFilmsTumbler) {
-        setFilmsTumbler(localStorageFilmsTumbler === 'true');
-      }
-      if (localStorageFilmsInputSearch) {
-        setFilmsInputSearch(localStorageFilmsInputSearch);
-      }
-  }, [openPopup]);
+    const filmsTumbler = localStorage.getItem('filmsTumbler') === 'true';
+    const filmsInputSearch = localStorage.getItem('filmsInputSearch');
+    setFilmsTumbler(filmsTumbler);
+    setFilmsInputSearch(filmsInputSearch || '');
+    handleGetMovies({
+      inputSearch: filmsInputSearch,
+      tumbler: filmsTumbler,
+    });
+  }, []);
 
   return (
     <section className="movies">
       <SearchForm
-        handleGetMovies={handleGetMovies}
+        handleFilmsTumblerChange={v => {
+          setFilmsTumbler(v);
+          if (v) {
+            localStorage.setItem('filmsTumbler', 'true');
+          } else {
+            localStorage.removeItem('filmsTumbler');
+          }
+          handleGetMovies({
+            tumbler: v,
+            inputSearch: filmsInputSearch,
+          });
+        }}
         filmsTumbler={filmsTumbler}
         filmsInputSearch={filmsInputSearch}
-        handleGetMoviesTumbler={handleGetMoviesTumbler}
+        handleFilmsInputSearchChange={v => {
+          setFilmsInputSearch(v);
+          localStorage.setItem('filmsInputSearch', v);
+        }}
+        handleFormSubmit={() => {
+          handleGetMovies({
+            tumbler: filmsTumbler,
+            inputSearch: filmsInputSearch,
+          });
+        }}
       />
       {preloader && <Preloader />}
       {errorText && <div className="movies__error-text">{errorText}</div>}

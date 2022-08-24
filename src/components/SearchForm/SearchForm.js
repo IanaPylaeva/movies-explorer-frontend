@@ -1,35 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './SearchForm.css';
 import loupe from '../../images/loupe.svg';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
-function SearchForm({ handleGetMovies, filmsTumbler, filmsInputSearch, handleGetMoviesTumbler }) {
-  const [inputSearch, setInputSearch] = React.useState('');
-  const [tumbler, setTumbler] = React.useState(false);
-  
+function SearchForm({
+  handleFilmsTumblerChange,
+  filmsTumbler,
+  filmsInputSearch,
+  handleFilmsInputSearchChange,
+  handleFormSubmit
+}) {
   function handleInputChange(evt) {
-    setInputSearch(evt.target.value);
+    if (handleFilmsInputSearchChange) {
+      handleFilmsInputSearchChange(evt.target.value);
+    }
   }
 
-  function handleTumblerChange(evt) {
-    const newTumbler = !tumbler;
-    setTumbler(newTumbler);
-    handleGetMoviesTumbler(newTumbler);
+  function handleTumblerChange() {
+    handleFilmsTumblerChange(!filmsTumbler);
   }
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    if (!tumbler) {
-    handleGetMovies(inputSearch);
-    } else {
-      handleGetMoviesTumbler(!tumbler);
-    }
+    handleFormSubmit(filmsInputSearch, filmsTumbler);
   }
-
-  useEffect(() => {
-    setTumbler(filmsTumbler);
-    setInputSearch(filmsInputSearch);
-  }, [filmsTumbler, filmsInputSearch]);
 
   return (
     <form className="search-form" onSubmit={handleSubmit}>
@@ -37,10 +31,10 @@ function SearchForm({ handleGetMovies, filmsTumbler, filmsInputSearch, handleGet
         <div className="search-form__container">
           <div className="search-form__film-container">
             <img src={loupe} className="search-form__loupe" alt="значок лупа" />
-            <input className="search-form__input-film" placeholder="Фильм" type="text" value={inputSearch || ''} onChange={handleInputChange} required />
+            <input className="search-form__input-film" placeholder="Фильм" type="text" value={filmsInputSearch || ''} onChange={handleInputChange} required />
             <button className="search-form__button-find" type="submit" onClick={handleSubmit}></button>
           </div>
-          <FilterCheckbox handleTumblerChange={handleTumblerChange} tumbler={tumbler} />
+          <FilterCheckbox handleTumblerChange={handleTumblerChange} tumbler={filmsTumbler} />
         </div>
       </div>
     </form>

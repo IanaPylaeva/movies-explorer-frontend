@@ -99,6 +99,8 @@ function App() {
   function onSignOut() {
     Token.removeToken();
     setLoggedIn(false);
+    localStorage.removeItem('movies');
+    localStorage.removeItem('beatfilm.movies');
     localStorage.removeItem('films');
     localStorage.removeItem('filmsTumbler');
     localStorage.removeItem('filmsInputSearch');

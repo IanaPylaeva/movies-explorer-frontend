@@ -63,14 +63,23 @@ class MainApi {
   };
 
   getMovies() {
+    const lsMovies = localStorage.getItem('movies');
+    if (lsMovies) {
+      return Promise.resolve(JSON.parse(lsMovies));
+    }
     return fetch(`${this._url}/movies`, {
       method: 'GET',
       headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},
     })
-    .then(this._handleResponse);
+    .then(this._handleResponse)
+    .then(movies => {
+      localStorage.setItem('movies', JSON.stringify(movies));
+      return movies;
+    });
   };
 
   addMovies(data) {
+    localStorage.removeItem('movies');
     return fetch(`${this._url}/movies`, {
       method: 'POST',
       headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},
@@ -80,6 +89,7 @@ class MainApi {
   };
 
   deleteMovies(movieId) {
+    localStorage.removeItem('movies');
     return fetch(`${this._url}/movies/${movieId}`, {
       method: 'DELETE',
       headers: {authorization: 'Bearer ' + localStorage.getItem('jwt'), ...this._headers},

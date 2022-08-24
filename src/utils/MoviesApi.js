@@ -16,11 +16,19 @@ class MoviesApi {
   };
 
   getMovies() {
+    const lsFilms = localStorage.getItem('beatfilm.movies');
+    if (lsFilms) {
+      return Promise.resolve(JSON.parse(lsFilms));
+    }
     return fetch(`${this._url}/beatfilm-movies`, {
       method: 'GET',
       headers: this._headers,
     })
-    .then(this._checkCorrectness);
+    .then(this._checkCorrectness)
+    .then(movies => {
+      localStorage.setItem('beatfilm.movies', JSON.stringify(movies));
+      return movies;
+    });
   };
 };
 
