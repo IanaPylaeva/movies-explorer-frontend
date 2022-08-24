@@ -24,7 +24,7 @@ function App() {
   const [popupTitle, setPopupTitle] = React.useState('');
   const [currentUser, setCurrentUser] = React.useState({});
   const [loggedIn, setLoggedIn] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -37,6 +37,7 @@ function App() {
       .then((data) => {
         setCurrentUser(data);
         setLoggedIn(true);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(serverError);
