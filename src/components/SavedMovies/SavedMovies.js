@@ -22,7 +22,10 @@ function SavedMovies({ openPopup }) {
       const filmsSaved = await mainApi.getMovies();
       setFilmsSaved(filmsSaved);
      
-      let filterData = filmsSaved.filter(({ nameRU }) => nameRU.toLowerCase().includes(params.inputSearch.toLowerCase()));
+      let filterData = filmsSaved;
+      if (params.inputSearch) {
+        filterData = filterData.filter(({ nameRU }) => nameRU.toLowerCase().includes(params.inputSearch.toLowerCase()));
+      }
       if (params.tumbler) {
         filterData = filmsSaved.filter(({ duration }) => duration <= 40);
       }
@@ -113,6 +116,6 @@ function SavedMovies({ openPopup }) {
         <div className="saved-movies__saved-devider"></div>     
     </section>
   );
-};
+}
 
 export default SavedMovies;
