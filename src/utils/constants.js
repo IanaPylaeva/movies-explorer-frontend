@@ -1,4 +1,5 @@
-const mainApiUrl = 'http://localhost:3001';
+const mainApiUrl = 'https://movie.bcknd.diplom.ianapylaeva.nomoredomains.xyz';
+/*const mainApiUrl = 'http://localhost:3001';*/
 const moviesApiUrl = 'https://api.nomoreparties.co';
 
 const profession = 'Студент';
