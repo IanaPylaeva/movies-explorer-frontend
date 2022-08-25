@@ -33,9 +33,10 @@ function SavedMovies({ openPopup }) {
       setFilms(filterData);
 
       localStorage.setItem('savedFilms', JSON.stringify(filterData));
+      
     } catch (err) {
       setErrorText(messageErrorMovies);
-      setFilms([]);      
+      setFilms([]);
       localStorage.removeItem('savedFilms');      
       localStorage.removeItem('savedFilmsTumbler');
       localStorage.removeItem('savedFilmsInputSearch');
@@ -51,9 +52,6 @@ function SavedMovies({ openPopup }) {
         await mainApi.deleteMovies(film._id);
         
         const newFilms = await mainApi.getMovies();
-        /*
-        const newFilms = localStorage.getItem('savedFilms');
-        */
         const tumbler = localStorage.getItem('savedFilmsTumbler');
         if(!tumbler) {
           setFilms(newFilms);
