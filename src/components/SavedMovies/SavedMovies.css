@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding-top: 140px;
 }
+.saved-movies__error-text {
+  text-align: center;
+  color: red;
+}
 
 @media screen and (max-width: 900px) {
   .saved-movies__saved-devider {

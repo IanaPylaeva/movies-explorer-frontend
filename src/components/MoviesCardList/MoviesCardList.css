@@ -8,6 +8,7 @@
 .movies-card-list__container {
   max-width: 89.06%;
   margin: 70px auto 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 364px);
   grid-template-rows: repeat(4, 271px);
@@ -27,7 +28,7 @@
   max-width: 100%;
   margin: 30px auto 0;
   padding: 0;
-  display: none;
+  display: flex;
 }
 .movies-card-list__button-more {
   min-width: 320px;
@@ -49,9 +50,6 @@
 }
 .movies-card-list__button-more:hover {
   opacity: .6;
-}
-.movies-card-list__container-more_active {
-  display: flex;
 }
 
 @media screen and (max-width: 1279px) {

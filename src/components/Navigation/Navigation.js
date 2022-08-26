@@ -1,10 +1,9 @@
+import React from 'react';
 import './Navigation.css';
-import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 function Navigation() {
-  const [showItems, setShowItems] = useState(false);
-
+  const [showItems, setShowItems] = React.useState(false);
   function handleToggleMenu() {
     setShowItems(!showItems);
   }

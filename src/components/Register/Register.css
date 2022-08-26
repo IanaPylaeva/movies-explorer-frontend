@@ -48,6 +48,12 @@
   color: #000000;
   outline: none;
 }
+.auth__input_error-red {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #EE3465;
+}
 .auth__input:focus {
   border-bottom: 1px solid #3456F3;;
 }
@@ -57,12 +63,6 @@
   line-height: 1.21;
   color: #000000;
 }
-.auth__input-mistake {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.21;
-  color: #EE3465;
-}
 .auth__input-error {
   margin: 6px 0 0;
   padding-bottom: 0;
@@ -70,6 +70,10 @@
   font-size: 10px;
   line-height: 1.2;
   color: #EE3465;
+  opacity: 0;
+}
+.auth__input-error_active {
+  opacity: 1;
 }
 .auth__button {
   border: none;

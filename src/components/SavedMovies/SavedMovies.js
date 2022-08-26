@@ -1,42 +1,119 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import './SavedMovies.css';
 import SearchForm from '../SearchForm/SearchForm';
-import MoviesCard from '../MoviesCard/MoviesCard';
+import MoviesCardList from '../MoviesCardList/MoviesCardList';
+import Preloader from '../Preloader/Preloader';
+import mainApi from '../../utils/MainApi';
+import { deleteErrorMovies, messageErrorMovies } from '../../utils/constants';
 
-import image1 from '../../images/movies-cards/movie-card-1.jpg';
-import image2 from '../../images/movies-cards/movie-card-2.jpg';
-import image3 from '../../images/movies-cards/movie-card-3.jpg';
+function SavedMovies({ openPopup }) {
+  const [films, setFilms] = React.useState(null);
+  const [preloader, setPreloader] = React.useState(false);
+  const [errorText, setErrorText] = React.useState('');
+  const [savedFilmsTumbler, setSavedFilmsTumbler] = React.useState(false);
+  const [savedFilmsInputSearch, setSavedFilmsInputSearch] = React.useState('');
+  const [filmsSaved, setFilmsSaved] = React.useState(null);
 
-const cards = [
-  image1,
-  image2,
-  image3,
-];
-
-function SavedMovies(props) {
-  return (
-    <section className="movies-card-list">
-      <SearchForm />
-      <div className="movies-card-list__container movies-card-list__container_type_saved">
-      {cards.map((card) => {
-        return (
-        <MoviesCard
-          key={card._id}
-          card={card}
-          onCardClick={props.onCardClick}
-          title="33 слова о дизайне"
-          time="1ч 47м"
-          isSaved={true}
-        />
-        )})
+  async function handleGetSavedMovies(params) {
+    setErrorText('');
+    setPreloader(true);
+    
+    try {  
+      const filmsSaved = await mainApi.getMovies();
+      setFilmsSaved(filmsSaved);
+     
+      let filterData = filmsSaved;
+      if (params.inputSearch) {
+        filterData = filterData.filter(({ nameRU }) => nameRU.toLowerCase().includes(params.inputSearch.toLowerCase()));
       }
-      </div>
-      <div className="movies-card-list__container-more">
-        <button className="movies-card-list__button-more" type="button">Ещё</button>
-      </div>
-      <div className="saved-movies__saved-devider"></div>
+      if (params.tumbler) {
+        filterData = filmsSaved.filter(({ duration }) => duration <= 40);
+      }
+      filterData = [...filterData];
+      setFilms(filterData);
+
+      localStorage.setItem('savedFilms', JSON.stringify(filterData));
+      
+    } catch (err) {
+      setErrorText(messageErrorMovies);
+      setFilms([]);
+      localStorage.removeItem('savedFilms');      
+      localStorage.removeItem('savedFilmsTumbler');
+      localStorage.removeItem('savedFilmsInputSearch');
+    } finally {
+      setPreloader(false);
+    }
+  }
+  
+  /* Удаление карточки из сохраненных */
+  async function savedMoviesToggle(film, favorite) {
+    if (!favorite) {
+      try {
+        await mainApi.deleteMovies(film._id);
+        
+        const newFilms = await mainApi.getMovies();
+        const tumbler = localStorage.getItem('savedFilmsTumbler');
+        if(!tumbler) {
+          setFilms(newFilms);
+        } else (
+          setFilms(newFilms.filter(({ duration }) => duration <= 40))
+        );
+      } catch (err) {
+        openPopup(deleteErrorMovies);
+      }
+    }
+  }
+
+    /* Забираем из localStorage последнее состояние фильтров */
+    useEffect(() => {
+      const savedFilmsTumbler = localStorage.getItem('savedFilmsTumbler');
+      const savedFilmsInputSearch = localStorage.getItem('savedFilmsInputSearch');
+      setSavedFilmsTumbler(savedFilmsTumbler === 'true');
+      setSavedFilmsInputSearch(savedFilmsInputSearch || '');
+      
+      handleGetSavedMovies({
+        inputSearch: savedFilmsInputSearch,
+        tumbler: savedFilmsTumbler,
+      });
+      
+    }, []);
+
+  return (
+    <section className="saved-movies">
+      <SearchForm
+        handleFilmsTumblerChange={v => {
+          setSavedFilmsTumbler(v);
+          if (v) {
+            localStorage.setItem('savedFilmsTumbler', 'true');
+          } else {
+            localStorage.removeItem('savedFilmsTumbler');
+          }
+          handleGetSavedMovies({
+            tumbler: v,
+            inputSearch: savedFilmsInputSearch,
+          });
+        }}
+        filmsTumbler={savedFilmsTumbler}
+        filmsInputSearch={savedFilmsInputSearch}
+        handleFilmsInputSearchChange={v => {
+          setSavedFilmsInputSearch(v);
+          localStorage.setItem('savedFilmsInputSearch', v);
+        }}
+        handleFormSubmit={() => {
+          handleGetSavedMovies({
+            inputSearch: savedFilmsInputSearch,
+            tumbler: savedFilmsTumbler,
+          });
+        }}
+      />
+      {preloader && <Preloader />}
+      {errorText && <div className="saved-movies__error-text">{errorText}</div>}
+      {!preloader && !errorText && films !== null && filmsSaved !== null && (
+        <MoviesCardList filmsRemains={[]} savedMoviesToggle={savedMoviesToggle} filmsSaved={filmsSaved} films={films}/>
+      )}
+        <div className="saved-movies__saved-devider"></div>     
     </section>
-  )
+  );
 }
 
 export default SavedMovies;
